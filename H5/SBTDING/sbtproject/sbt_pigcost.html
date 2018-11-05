@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <link href="../css/mui.picker.css" rel="stylesheet" />
+    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-center"></a>
+        <h1 class="mui-title">抓养成本模型</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-content-padded" style="margin: 5px;">
+            <form class="mui-input-group">
+
+                <div class="mui-input-row" style="height:45px">
+                    <label>猪苗成本：<br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="zmcb" value="350" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+
+                </div>
+
+                <div class="mui-input-row" style="height:45px">
+                    <label>饲料成本：<br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="slcb" value="840" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label>兽药疫苗：<br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="syym" value="50" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label>折旧摊销：<br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="zjtx" value="25" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label>人工水电：<br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="rgsd" value="50" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label>上市率：<br><a style="font-size:12px;color:darkgrey">(%)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="ssl" value="96" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label>出栏均重：<br><a style="font-size:12px;color:darkgrey">(斤/头)</a></label>
+                    <div class="mui-numbox" style="width: 50%">
+                        <button class="mui-btn-numbox-minus" type="button">-</button>
+                        <input class="mui-input-numbox" type="number" id="cljz" value="250" onblur="clickjisuan()" />
+                        <button class="mui-btn-numbox-plus" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:45px">
+                    <label><a style="color:red"><strong>成本合计</strong></a><br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <input id="cbhj" type="text" style="width: 50%;text-align:center;font-size:x-large;color:red;" value="1330" />
+                </div>
+
+
+
+                <div class="mui-input-row" style="height:50px">
+                    <label style="text-align:center"><a style="color:blue;font-size:large;text-align:center"><strong>成本价</strong></a><br><a style="font-size:12px;color:darkgrey">(元/斤)</a></label>
+                    <input id="cbj" type="text" style="width: 50%;text-align:center;font-size:x-large;color:blue;" value="5.3" />
+                </div>
+                <div class="mui-input-row" style="height:50px">
+                    <label style="text-align:center"><a style="color:blue;font-size:large;text-align:center"><strong>猪价</strong></a><br><a style="font-size:12px;color:darkgrey">(元/斤)</a></label>
+                    <div class="mui-numbox" style="width: 50%;">
+
+                        <input type="number" id="dqzj" style="text-align:center" value="5.3" />
+
+                    </div>
+                </div>
+                <div class="mui-input-row" style="height:50px">
+                    <label style="text-align:center"><a style="color:blue;font-size:large;text-align:center"><strong>利润</strong></a><br><a style="font-size:12px;color:darkgrey">(元/头)</a></label>
+                    <input id="dqlr" type="text" style="width: 50%;text-align:center;font-size:x-large;color:blue;" value="" />
+                </div>
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary" onclick="clickok()">开始测算</button>&nbsp;&nbsp;
+                    <button type="reset" class="mui-btn mui-btn-danger" onclick="javascript:window.history.go(-1);">取消</button>
+                </div>
+
+                <div style="display:none">
+                    <h5 class="mui-content-padded" style="color:red;font-size:20px;text-align:center">测算结果表<a style="color:red"></a>  </h5>
+                    <div class="mui-input-row">
+                        <label style="width:50%;text-align:center"><strong>猪价（元/斤）</strong></label>
+                        <label style="width:50%;text-align:center"><strong>利润（元/头）</strong></label>
+                    </div>
+                    <div class="mui-input-row">
+                        <label style="width:50%;text-align:center" id="lprice1">5.5</label>
+                        <label style="width:50%;text-align:center" id="lcost1">50</label>
+                    </div>
+                    <div class="mui-input-row">
+                        <label style="width:50%;text-align:center" id="lprice2">6.0</label>
+                        <label style="width:50%;text-align:center" id="lcost2">175</label>
+                    </div>
+                    <div class="mui-input-row">
+                        <label style="width:50%;text-align:center" id="lprice3">6.5</label>
+                        <label style="width:50%;text-align:center" id="lcost3">300</label>
+                    </div>
+                    <div class="mui-input-row">
+                        <label style="width:50%;text-align:center" id="lprice4">7.0</label>
+                        <label style="width:50%;text-align:center" id="lcost4">425</label>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        function clickok() {
+          
+            //出栏均重-30斤
+            v_cljz = parseFloat(document.getElementById("cljz").value);
+            //猪苗成本
+            v_zmcb = parseFloat(document.getElementById("zmcb").value);
+             //兽药疫苗
+            v_syym = parseFloat(document.getElementById("syym").value);
+            //折旧摊销
+            v_zjtx = parseFloat(document.getElementById("zjtx").value);
+            ////人工水电
+            v_rgsd = parseFloat(document.getElementById("rgsd").value);
+            ////上市率
+            v_ssl = parseFloat(document.getElementById("ssl").value)/100;
+            //成本合计
+            document.getElementById("slcb").value = (120*7).toFixed(0);
+                //饲料成本
+            v_slcb = document.getElementById("slcb").value;  
+            //成本合计
+     
+    
+            v_cbhj = (v_zmcb / v_ssl + parseFloat(v_slcb) + parseFloat(v_rgsd) + parseFloat(v_zjtx) + parseFloat(v_syym)).toFixed(0);
+            document.getElementById("cbhj").value = v_cbhj
+            document.getElementById("cbj").value = (v_cbhj / v_cljz).toFixed(1);
+            v_cbj = document.getElementById("cbj").value;
+            document.getElementById("lcost1").innerHTML = ((document.getElementById("lprice1").innerHTML - v_cbj) * v_cljz).toFixed(0);
+            document.getElementById("lcost2").innerHTML = ((document.getElementById("lprice2").innerHTML - v_cbj) * v_cljz).toFixed(0);
+            document.getElementById("lcost3").innerHTML = ((document.getElementById("lprice3").innerHTML - v_cbj) * v_cljz).toFixed(0);
+            document.getElementById("lcost4").innerHTML = ((document.getElementById("lprice4").innerHTML - v_cbj) * v_cljz).toFixed(0);
+            document.getElementById("dqlr").value = ((document.getElementById("dqzj").value - v_cbj) * v_cljz).toFixed(0);
+            v_str = '';
+            for (i = 1; i <= 4; i++) {
+                str1 = document.getElementById("lprice"+i).innerHTML;
+                str2 = document.getElementById("lcost" + i).innerHTML;
+                v_str += '当猪价在' + str1 + '元时，利润为' + str2 + '元.';
+                v_str+='\n'
+            }
+            mui.alert(v_str, '利润测算结果：', function () { });
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SBTJT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <style>
+
+        .mui-table h4, .mui-table h5, .mui-table .mui-h5, .mui-table .mui-h6, .mui-table p {
+            margin-top: 0;
+        }
+
+        .mui-table h4 {
+            line-height: 21px;
+            font-weight: 500;
+        }
+
+        .mui-table .oa-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .mui-table .oa-icon-star-filled {
+            color: #f14e41;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">
+            <b id="times"></b>
+        </h1>
+    </header>
+    <div class="mui-content">
+        <ul id="TabInfo" class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+            <!--<li class="mui-table-view-cell" href="input.html">
+        <div class="mui-table">
+            <div class="mui-table-cell mui-col-xs-10">
+                <h4 class="mui-ellipsis"><a href="">客户计划项目</a></h4>
+                <h5>完成进度：80%</h5>
+                <p class="mui-h6 mui-ellipsis">完成情况：XXXXXXXXXXXXXX</p>
+            </div>
+            <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+                <span class="mui-h5">12:25</span>
+            </div>
+        </div>
+    </li>
+    <li hidden class="mui-table-view-cell">
+        <div class="mui-table">
+            <div class="mui-table-cell mui-col-xs-10">
+                <h4 class="mui-ellipsis-2">猪管网项目</h4>
+                <h5>完成进度：80%</h5>
+                <p class="mui-h6 mui-ellipsis">完成情况：XXXXXXXXXXXXXX</p>
+            </div>
+            <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+                <span class="mui-h5">12:25</span>
+
+            </div>
+        </div>
+    </li>
+    <li hidden class="mui-table-view-cell">
+        <div class="mui-table">
+            <div class="mui-table-cell mui-col-xs-10">
+                <h4 class="mui-ellipsis-2">日常事项</h4>
+                <h5>完成进度：80%</h5>
+                <p class="mui-h6 mui-ellipsis">完成情况：XXXXXXXXXXXXXX</p>
+            </div>
+            <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+                <span class="mui-h5">12:25</span>
+
+            </div>
+        </div>
+    </li>
+            <li class="mui-table-view-cell" onclick="GetInputInfo(123)">
+                <div class="mui-table">
+                    <div class="mui-table-cell mui-col-xs-10">
+                        <h4 class="mui-ellipsis-2">信息化推进办公室张彦合同付款信息化推进办公室张彦合同付款信息化推进办公室张彦合同付款</h4>
+                        <h5>完成进度：80%</h5>
+                        <p class="mui-h6 mui-ellipsis">完成情况：XXXXXXXXXXXXXX</p>
+                    </div>
+                    <div class="mui-table-cell mui-col-xs-2 mui-text-right">
+                        <span class="mui-h5">12:25</span>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+        <form id="btn_form" class="mui-input-group">
+            <div class="mui-button-row">
+                <button id="btn_add" type="button" class="mui-btn mui-btn-primary" onclick="AddNewInput()">新增</button>&nbsp;&nbsp;
+                <button type="button" class="mui-btn mui-btn-primary" onclick="SubmitInput()">提交</button>&nbsp;&nbsp;
+            </div>
+        </form>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        var months;
+        var weeks;
+        var user_id;
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+
+        //初始化加载界面内容
+        $(document).ready(function () {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var newweek = Math.floor((day-1)/7+1);
+            months = getQueryString('months') == null ? date.getFullYear() + "-" + (date.getMonth() + 1) : getQueryString('months');
+            weeks = getQueryString('weeks') == null ? newweek : getQueryString('weeks');
+            user_id = getQueryString('user_id');
+            document.getElementById("times").innerHTML = months.replace("-", "年") + "月" + "第" + weeks + "周";
+
+            //通过查询是否有数据
+            $.ajax({
+                url: "../../../Handler/JtzbHandler.ashx?type=GetList",
+                type: "post",
+                data: { user_id: user_id, months: months, weeks: weeks },
+                dataType: "json",
+                success: function (data) {
+                    if (data != "") {
+                        var listPro = data.Table;
+                        var new_Html = "";
+                        for (var i = 0; i < listPro.length; i++) {
+                            new_Html += '<li class="mui-table-view-cell" onclick="GetInputInfo('+ listPro[i].ID + ')">';
+                            new_Html += '<div class="mui-table">';
+                            new_Html += '<div class="mui-table-cell mui-col-xs-10">';
+                            new_Html += '<h4 class="mui-ellipsis-2">' + listPro[i].TITLE + '</h4>';
+                            new_Html += '<h5> 完成进度：' + listPro[i].RATE + ' %</h5> ';
+                            new_Html += '<p class="mui-h6 mui-ellipsis" > 完成情况：' + listPro[i].CONTENT + '</p> ';
+                            new_Html += '</div> ';
+                            new_Html += '<div class="mui-table-cell mui-col-xs-2 mui-text-right"> ';
+                            new_Html += '<span class="mui-h5" ></span> ';
+                            new_Html += '</div> ';
+                            new_Html += '</div> ';
+                            new_Html += '</li>';
+                            if (listPro[i].STATUS == 1) {
+                                $("#btn_form").hide();
+                            }
+                        }
+                        $("#TabInfo").append(new_Html);
+                    }
+                }
+            });
+        });
+
+        //跳转已填页面
+        function GetInputInfo(id) {
+            window.location.href = "input.html?id=" + id;
+        }
+
+        //新增按钮
+        function AddNewInput() {
+            var test = $("#TabInfo li").length;
+            if (test >= 5) {
+                alert("工作计划一周仅允许存在5条！");
+            }
+            else {
+                window.location.href = "input.html?months=" + months + "&weeks=" + weeks + "&user_id=" + user_id;
+            }
+        }
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+
+        function SubmitInput() {
+            if (confirm("提交操作后，本周工作即锁定无法再次修改！")) {
+                //alert("提交成功！");
+                $.ajax({
+                    url: "../../../Handler/JtzbHandler.ashx?type=Submit",
+                    type: "post",
+                    data: { months: months, weeks: weeks, user_id: user_id },
+                    dataType: "json",
+                    success: function (data) {
+                        alert(data.result);
+                        window.location.reload();
+                    }
+                });
+            }
+            //else {
+            //}
+        }
+    </script>
+</body>
+</html>

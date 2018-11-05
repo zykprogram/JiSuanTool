@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>sbtjt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <!--App自定义的css-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+</head>
+
+<body>
+    <form method="post" id="form1">
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">双胞胎集团</h1>
+        </header>
+        <div class="mui-content">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="A2" onclick="GORedirect('YL_Edit.html?showmenu=false&userid=')">
+                        <i class="iconfont icon-tianbao"></i>
+                        <div class="mui-media-body">基础数据</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="A2" onclick="GORedirect('YLDetail.html?showmenu=false&userid=')">
+                        <i class="iconfont icon-tianbao"></i>
+                        <div class="mui-media-body">日报填报</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="A2" onclick="GORedirect('YLDetail_Sample.html?showmenu=false&userid=')">
+                        <i class="iconfont icon-tianbao"></i>
+                        <div class="mui-media-body">打样填报</div>
+                    </a>
+                </li>
+                <!--<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="href1" onclick="goto('http://dingtalk.sbtjt.com/WebReport9/ReportServer?reportlet=TECH%2FDayTechnician_Day.cpt&op=h5&showmenu=false&userid=')">
+                        <span class="iconfont icon-baobiaochaxun"></span>
+                        <div class="mui-media-body">月报报表</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="href2" onclick="goto('http://dingtalk.sbtjt.com/WebReport9/ReportServer?reportlet=TECH%2FSaleVolume.cpt&op=h5&showmenu=false&userid=')">
+                        <span class="iconfont icon-baobiaofenxi"></span>
+                        <div class="mui-media-body">销量报表</div>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </form>
+</body>
+</html>
+<script src="../js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+
+    function goto(url) {
+        if (GetQueryString("userid") == null) {
+            alert("请认证后再登录！");
+            return;
+        }
+        window.location.href = url + GetQueryString("userid");  
+        //alert(url + GetQueryString("userid"));
+    }
+    function GORedirect(url) {
+        if ( GetQueryString("userid")   == null) {
+            alert("请认证后再登录！");
+            return;
+        }
+        window.open( url + GetQueryString("userid"));
+       // alert(url + GetQueryString("userid"));
+     
+    }
+  
+
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    // 调用方法
+    //document.getElementById("href1").href = "sbt_yx_custlist_yd.aspx?url=" + GetQueryString("url");
+    //	document.getElementById("href2").href = "sbt_yx_custlist.aspx?url=" + GetQueryString("url");
+   // localStorage.setItem("sbtuserid", GetQueryString("userid"))
+    //alert("离线数据是：" + localStorage.getItem("sbtuserid"));
+
+</script>
+

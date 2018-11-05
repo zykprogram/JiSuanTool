@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SBTJT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">鱼料标杆示范户</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-content-padded" style="margin: 2px;">
+            <h5>客户：</h5>
+            <div class="mui-input-row">
+                <textarea id="Name" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>所属经销商：</h5>
+            <div class="mui-input-row">
+                <textarea id="Supplier" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>面积（亩）:</h5>
+            <div class="mui-input-row">
+                <textarea id="Area" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>水深（米）：</h5>
+            <div class="mui-input-row">
+                <textarea id="Depth" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>增氧机（台）：</h5>
+            <div class="mui-input-row">
+                <textarea id="Zengyj" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>投饵机（台）：</h5>
+            <div class="mui-input-row">
+                <textarea id="Touej" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>塘租（元/批）：</h5>
+            <div class="mui-input-row">
+                <textarea id="T_rent" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>电费（元/批）：</h5>
+            <div class="mui-input-row">
+                <textarea id="Eletric" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>人工费（元/批）：</h5>
+            <div class="mui-input-row">
+                <textarea id="Laborcost" rows="1" placeholder=""></textarea>
+            </div>
+            <h5 id="selectfile"></h5>
+            <div class="mui-input-row">
+                <input id="selectfile" onclick="SelectFile()" type="button" value="请选择文件"/>
+                <input type="file" hidden id="file_input" title="123" accept="image/*">
+                <img id="Photo" class="img" />
+            </div>
+            <form class="mui-input-group">
+                <div class="mui-button-row">
+                    <button id="btn_sure" type="button" class="mui-btn mui-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+                    <button type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script>
+    function SelectFile() {
+        return $("#file_input").click();
+    }
+    var id;
+    var regex = /^[0-9]+.?[0-9]*$/;
+    $(document).ready(function () {
+        var id = getQueryString("id");
+
+        //选择文件
+        $("input[type='file']").change(function () {
+            var file = this.files[0];
+            if (window.FileReader) {
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                //监听文件读取结束后事件    
+                reader.onloadend = function (e) {
+                    $(".img").attr("src", e.target.result);    //e.target.result就是最后的路径地址
+                };
+            }
+        });
+
+        //id不为空时获取养户信息
+        debugger;
+        //获取图片
+        if (!(id == null || id == undefined)) {
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetBaseImg",
+                type: "post",
+                data: { id: id },
+                dataType: "json",
+                success: function (data) {
+                    document.getElementById("Photo").src = data.result;
+                }
+            });
+
+            //获取其他字段信息
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetBaseInfo",
+                type: "post",
+                data: { id: id },
+                dataType: "json",
+                success: function (data) {
+                    document.getElementById("Name").innerText = data[0].NAME;
+                    document.getElementById("Supplier").value = data[0].SUPPLIER;
+                    document.getElementById("Area").value = data[0].AREA;
+                    document.getElementById("Depth").value = data[0].DEPTH;
+                    document.getElementById("Zengyj").value = data[0].ZENGYJ;
+                    document.getElementById("Touej").value = data[0].TOUEJ;
+                    document.getElementById("T_rent").value = data[0].T_RENT;
+                    document.getElementById("Eletric").value = data[0].ELETRIC;
+                    document.getElementById("Laborcost").value = data[0].LABORCOST;
+                }
+            });
+        }
+
+        //提交按钮
+        $("#btn_sure").click(function () {
+            debugger;
+            if (regex.test($("#Area").val()) && regex.test($("#Depth").val())
+                && regex.test($("#Zengyj").val()) && regex.test($("#Touej").val())
+                && regex.test($("#T_rent").val()) && regex.test($("#Eletric").val())
+                && regex.test($("#Laborcost").val())) {
+                if (id == null || id == undefined) {
+                    $.ajax({
+                        url: "../../../Handler/YLHandler.ashx?method=AddBase",
+                        type: "post",
+                        data: {
+                            Name: $("#Name").val(),
+                            Supplier: $("#Supplier").val(),
+                            Area: $("#Area").val(),
+                            Depth: $("#Depth").val(),
+                            Zengyj: $("#Zengyj").val(),
+                            Touej: $("#Touej").val(),
+                            T_rent: $("#T_rent").val(),
+                            Eletric: $("#Eletric").val(),
+                            Laborcost: $("#Laborcost").val(),
+                            UserId: getQueryString('userid'),
+                            Photo: document.getElementById("Photo").src
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            alert(data.result);
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            debugger;
+                            // 状态码
+                            console.log(XMLHttpRequest.status);
+                            // 状态
+                            console.log(XMLHttpRequest.readyState);
+                            // 错误信息   
+                            console.log(textStatus);
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        url: "../../../Handler/YLHandler.ashx?method=EditBase",
+                        type: "post",
+                        data: {
+                            id: id,
+                            Name: $("#Name").val(),
+                            Supplier: $("#Supplier").val(),
+                            Area: $("#Area").val(),
+                            Depth: $("#Depth").val(),
+                            Zengyj: $("#Zengyj").val(),
+                            Touej: $("#Touej").val(),
+                            T_rent: $("#T_rent").val(),
+                            Eletric: $("#Eletric").val(),
+                            Laborcost: $("#Laborcost").val(),
+                            UserId: getQueryString('userid'),
+                            Photo: document.getElementById("Photo").src
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            alert(data.result);
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+    //QueryString
+    function getQueryString(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿html
+{
+	height: 100%;
+}
+body
+{
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+}
+table, td, img, div, span
+{
+	font-size: 12px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+a:link, a:visited, a:hover
+{
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+#topm
+{
+	height: 130px;
+}
+#side_left
+{
+	width: 7px;
+	background-position: left top;
+	background-image: url(/Images/left.gif);
+	background-repeat: repeat-y;
+}
+#side_right
+{
+	width: 8px;
+	background-position: right top;
+	background-image: url(/Images/right.gif);
+	background-repeat: repeat-y;
+}
+#bottom_left
+{
+	width: 7px;
+	height: 11px;
+	background-position: left top;
+	background-image: url(/Images/bottom_left.gif);
+	background-repeat: no-repeat;
+}
+#bottom_midden
+{
+	background-position: center top;
+	background-image: url(/Images/bottom_centerbg.gif);
+	background-repeat: repeat-x;
+	height: 11px;
+}
+#bottom_right
+{
+	height: 11px;
+	width: 8px;
+	background-position: right top;
+	background-image: url(/Images/bottom_right.gif);
+	background-repeat: no-repeat;
+}

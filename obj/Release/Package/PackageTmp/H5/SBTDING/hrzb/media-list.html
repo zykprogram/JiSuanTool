@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SBTJT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <style>
+        .title {
+            margin: 20px 15px 10px;
+            color: #6d6d72;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">周报</h1>
+    </header>
+    <div class="mui-content">
+        <form class="mui-input-group">
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary" onclick="AddNewTriplex()">新增周报</button>&nbsp;&nbsp;
+            </div>
+        </form>
+    </div>
+    <div id="TabInfo">
+        <div class="title">
+            2018年08月周报
+        </div>
+        <ul class="mui-table-view mui-table-view-chevron">
+            <li class="mui-table-view-cell mui-media">
+                <a class="mui-navigate-right" href="list-triplex-row.html?user_id=015513">
+                    <img class="mui-media-object mui-pull-left" src="../images/spring.png">
+                    <div class="mui-media-body">
+                        第一周（01-07号）
+                        <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="title">
+            2018年07月周报
+        </div>
+        <ul class="mui-table-view mui-table-view-chevron">
+            <li class="mui-table-view-cell mui-media">
+                <a class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="../images/cbd.jpg">
+                    <div class="mui-media-body">
+                        第一周（01-07号）
+                        <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a class='mui-navigate-right' href="javascript:;">
+                    <img class="mui-media-object mui-pull-left" src="../images/yuantiao.jpg">
+                    <div class="mui-media-body">
+                        第二周（08-14号）
+                        <p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+                    <div class="mui-media-body">
+                        第三周（15-21号）
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media">
+                <a class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="../images/muwu.jpg">
+                    <div class="mui-media-body">
+                        第四周（22-31号）
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                        <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        var user_id;
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        $(document).ready(function () {
+            user_id = getQueryString('user_id');
+            $.ajax({
+                url: "../../../Handler/JtzbHandler.ashx?type=GetAll",
+                type: "post",
+                data: { user_id: user_id },
+                dataType: "json",
+                success: function (data) {
+                    if (data != "") {
+                        var listPro = data.Table;
+                        var new_Html = "";
+                        var oldmonths = "";
+                        var oldweeks = "";
+                        for (var i = 0; i < listPro.length; i++) {
+                            if (i == 0) {
+                                oldmonths = listPro[i].MONTH;
+                                oldweeks = listPro[i].WEEK;
+                                weeknum1 = (listPro[i].WEEK - 1) * 7 + 1;
+                                var Times = oldmonths.split('-');
+                                weeknum2 = listPro[i].WEEK * 7 > (new Date(Times[0], Times[1], 0)).getDate() ? (new Date(Times[0], Times[1], 0)).getDate() : listPro[i].WEEK * 7;
+                                new_Html += '<div class="title">' + listPro[i].MONTH + '周报';
+                                new_Html += '</div >';
+                                new_Html += '<ul class="mui-table-view mui-table-view-chevron">';
+                                debugger;
+                                new_Html += '<li class="mui-table-view-cell mui-media" onclick="GetTriplex(' + (listPro[i].MONTH).split('-') + ',' + listPro[i].WEEK + ')">';
+                                new_Html += '<a class="mui-navigate-right">';
+                                new_Html += '<img class="mui-media-object mui-pull-left" src="../images/cbd.jpg">';
+                                new_Html += '<div class="mui-media-body">';
+                                new_Html += '第' + listPro[i].WEEK + '周（' + weeknum1 + ' - ' + weeknum2 + '号）';
+                                new_Html += '<p class="mui - ellipsis">' + listPro[i].TITLE + '</p>';
+                            }
+                            else {
+                                if (oldmonths != listPro[i].MONTH) {
+                                    new_Html += '</div>';
+                                    new_Html += '</a>';
+                                    new_Html += '</li>';
+                                    new_Html += '</ul>';
+                                    new_Html += '<div class="title">';
+                                    new_Html += listPro[i].MONTHS + '周报';
+                                    new_Html += '</div >';
+                                    new_Html += '<ul class="mui-table-view mui-table-view-chevron">';
+                                    new_Html += '<li class="mui-table-view-cell mui-media" >';
+                                    new_Html += '<a class="mui-navigate-right">';
+                                    new_Html += '<img class="mui-media-object mui-pull-left" src="../images/cbd.jpg">';
+                                    new_Html += '<div class="mui-media-body">';
+                                    new_Html += '第' + listPro[i].WEEK + '周（' + weeknum1 + ' - ' + weeknum2 + '号）';
+                                    new_Html += '<p class="mui - ellipsis">' + listPro[i].TITLE + '</p>';
+                                }
+                                else {
+                                    if (oldweeks == listPro[i].WEEK) {
+                                        new_Html += '<p class="mui - ellipsis">' + listPro[i].TITLE + '</p>';
+                                    }
+                                    else {
+                                        new_Html += '</div>';
+                                        new_Html += '</a>';
+                                        new_Html += '</li>';
+                                    }
+                                }
+                            }
+                        }
+                        if (listPro.length != 0) {
+                            new_Html += '</div>';
+                            new_Html += '</a>';
+                            new_Html += '</li>';
+                            new_Html += '</ul>';
+                        }
+                        $("#TabInfo").html(new_Html);
+                    }
+                }
+            });
+        });
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+
+        function AddNewTriplex() {
+            $.ajax({
+                url: "../../../Handler/JtzbHandler.ashx?type=GetInfo",
+                type: "post",
+                data: { user_id: user_id },
+                dataType: "json",
+                success: function (data) {
+                    if (data != "") {
+                        if (data.NUMBERS == 0) {
+                            window.location.href = "list-triplex-row.html?user_id=" + user_id;
+                        } else {
+                            alert("已添加本周工作计划！请直接在本周计划上修改!");
+                        }
+                    }
+                }
+            });
+        }
+
+        function GetTriplex(year, month, weeks) {
+            months = year + '-' + month;
+            window.location.href = "list-triplex-row.html?user_id=" + user_id + "&months=" + months + "&weeks=" + weeks;
+        }
+    </script>
+</body>
+</html>

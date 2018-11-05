@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://newv.com.cn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://newv.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://newv.com.cn/">
+      <s:element name="GetUserInfoByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoByLoginNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Encrypto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptoResult" type="tns:ReturnValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HasError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnObject" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="realName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userStatusCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leaderUserLoginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullDeptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullUserGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userExtends" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="realName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userStatusCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leaderUserLoginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullDeptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullUserGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userExtends" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfoByNull">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="realName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userStatusCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leaderUserLoginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullDeptName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullUserGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userExtends" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfoByNullResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserInfoByNullResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserByLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserByLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserByLoginNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserLoginName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserLoginNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckUserLoginNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldDeptPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newDeptPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveDeptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDeptAcitve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDeptAcitveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetDeptAcitveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isGroup" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddDeptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserFromUserGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="callUserPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullGroupName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveUserFromUserGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveUserFromUserGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folderCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="folderName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFolderInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertFolderInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserInfoByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptoSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypto" />
+  </wsdl:message>
+  <wsdl:message name="EncryptoSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="InsertUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoByNullSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoByNull" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoByNullSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoByNullResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserByLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserByLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserLoginNameSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUserLoginName" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserLoginNameSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUserLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveDept" />
+  </wsdl:message>
+  <wsdl:message name="MoveDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDeptAcitveSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDeptAcitve" />
+  </wsdl:message>
+  <wsdl:message name="SetDeptAcitveSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDeptAcitveResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDept" />
+  </wsdl:message>
+  <wsdl:message name="AddDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromUserGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="RemoveUserFromUserGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFolderInfo" />
+  </wsdl:message>
+  <wsdl:message name="InsertFolderInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFolderInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserInterfaceSoap">
+    <wsdl:operation name="GetUserInfoByLoginName">
+      <wsdl:input message="tns:GetUserInfoByLoginNameSoapIn" />
+      <wsdl:output message="tns:GetUserInfoByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypto">
+      <wsdl:input message="tns:EncryptoSoapIn" />
+      <wsdl:output message="tns:EncryptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInfo">
+      <wsdl:input message="tns:InsertUserInfoSoapIn" />
+      <wsdl:output message="tns:InsertUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input message="tns:UpdateUserInfoSoapIn" />
+      <wsdl:output message="tns:UpdateUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfoByNull">
+      <wsdl:input message="tns:UpdateUserInfoByNullSoapIn" />
+      <wsdl:output message="tns:UpdateUserInfoByNullSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByLoginName">
+      <wsdl:input message="tns:DeleteUserByLoginNameSoapIn" />
+      <wsdl:output message="tns:DeleteUserByLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserLoginName">
+      <wsdl:input message="tns:CheckUserLoginNameSoapIn" />
+      <wsdl:output message="tns:CheckUserLoginNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveDept">
+      <wsdl:input message="tns:MoveDeptSoapIn" />
+      <wsdl:output message="tns:MoveDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDeptAcitve">
+      <wsdl:input message="tns:SetDeptAcitveSoapIn" />
+      <wsdl:output message="tns:SetDeptAcitveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDept">
+      <wsdl:input message="tns:AddDeptSoapIn" />
+      <wsdl:output message="tns:AddDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromUserGroup">
+      <wsdl:input message="tns:RemoveUserFromUserGroupSoapIn" />
+      <wsdl:output message="tns:RemoveUserFromUserGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">folderCode:岗位编码&lt;br/&gt;folderName:岗位名称&lt;br/&gt; parentCode:父级岗位编码&lt;br/&gt;parentName:父级岗位名称&lt;br/&gt; remark:备注信息</wsdl:documentation>
+      <wsdl:input message="tns:InsertFolderInfoSoapIn" />
+      <wsdl:output message="tns:InsertFolderInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserInterfaceSoap" type="tns:UserInterfaceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfoByLoginName">
+      <soap:operation soapAction="http://newv.com.cn/GetUserInfoByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://newv.com.cn/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://newv.com.cn/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypto">
+      <soap:operation soapAction="http://newv.com.cn/Encrypto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInfo">
+      <soap:operation soapAction="http://newv.com.cn/InsertUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://newv.com.cn/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfoByNull">
+      <soap:operation soapAction="http://newv.com.cn/UpdateUserInfoByNull" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByLoginName">
+      <soap:operation soapAction="http://newv.com.cn/DeleteUserByLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserLoginName">
+      <soap:operation soapAction="http://newv.com.cn/CheckUserLoginName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveDept">
+      <soap:operation soapAction="http://newv.com.cn/MoveDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDeptAcitve">
+      <soap:operation soapAction="http://newv.com.cn/SetDeptAcitve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDept">
+      <soap:operation soapAction="http://newv.com.cn/AddDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromUserGroup">
+      <soap:operation soapAction="http://newv.com.cn/RemoveUserFromUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderInfo">
+      <soap:operation soapAction="http://newv.com.cn/InsertFolderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserInterfaceSoap12" type="tns:UserInterfaceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserInfoByLoginName">
+      <soap12:operation soapAction="http://newv.com.cn/GetUserInfoByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://newv.com.cn/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://newv.com.cn/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypto">
+      <soap12:operation soapAction="http://newv.com.cn/Encrypto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserInfo">
+      <soap12:operation soapAction="http://newv.com.cn/InsertUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap12:operation soapAction="http://newv.com.cn/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfoByNull">
+      <soap12:operation soapAction="http://newv.com.cn/UpdateUserInfoByNull" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByLoginName">
+      <soap12:operation soapAction="http://newv.com.cn/DeleteUserByLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserLoginName">
+      <soap12:operation soapAction="http://newv.com.cn/CheckUserLoginName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveDept">
+      <soap12:operation soapAction="http://newv.com.cn/MoveDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDeptAcitve">
+      <soap12:operation soapAction="http://newv.com.cn/SetDeptAcitve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDept">
+      <soap12:operation soapAction="http://newv.com.cn/AddDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromUserGroup">
+      <soap12:operation soapAction="http://newv.com.cn/RemoveUserFromUserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFolderInfo">
+      <soap12:operation soapAction="http://newv.com.cn/InsertFolderInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserInterface">
+    <wsdl:port name="UserInterfaceSoap" binding="tns:UserInterfaceSoap">
+      <soap:address location="http://192.168.10.43/framework/api/userinterface.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserInterfaceSoap12" binding="tns:UserInterfaceSoap12">
+      <soap12:address location="http://192.168.10.43/framework/api/userinterface.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

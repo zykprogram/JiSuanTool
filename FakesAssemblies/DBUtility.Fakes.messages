@@ -1,0 +1,4 @@
+E:\C#\JiSuanTool\JiSuanTool\WebApp\Fakes\DBUtility.fakes : warning : 无法为 DBUtility.EffentNextType 生成存根: 类型是一个值类型。
+E:\C#\JiSuanTool\JiSuanTool\WebApp\Fakes\DBUtility.fakes : warning : 无法为 DBUtility.DbHelperMySQL 生成存根: 未能解析程序集“MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d”。是否缺少程序集引用?。
+E:\C#\JiSuanTool\JiSuanTool\WebApp\Fakes\DBUtility.fakes : warning : 无法为 DBUtility.EffentNextType 生成填充码: 类型是一个枚举。
+E:\C#\JiSuanTool\JiSuanTool\WebApp\Fakes\DBUtility.fakes : warning : 无法为 DBUtility.DbHelperMySQL 生成填充码: 未能解析程序集“MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d”。是否缺少程序集引用?。

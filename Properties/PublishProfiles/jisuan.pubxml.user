@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\C#\Out</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/agsXMPP.dll">
+      <publishTime>04/01/2014 09:22:30</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>04/30/2013 14:09:56</publishTime>
+    </File>
+    <File Include="bin/AspNetPager.dll">
+      <publishTime>08/27/2014 08:41:59</publishTime>
+    </File>
+    <File Include="bin/BasePage.dll">
+      <publishTime>08/27/2014 08:41:59</publishTime>
+    </File>
+    <File Include="bin/Common.dll">
+      <publishTime>05/20/2014 16:35:19</publishTime>
+    </File>
+    <File Include="bin/DBUtility.dll">
+      <publishTime>06/07/2014 12:30:42</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:52:52</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:51:00</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:49:30</publishTime>
+    </File>
+    <File Include="bin/HttpTool.dll">
+      <publishTime>08/30/2018 12:19:11</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>02/08/2018 17:06:56</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:51:32</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:57:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:50:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.QualityTools.Testing.Fakes.dll">
+      <publishTime>07/26/2012 19:41:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>06/24/2012 13:52:52</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/26/2017 14:21:43</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>12/16/2016 15:31:06</publishTime>
+    </File>
+    <File Include="bin/PrivateSystem.dll">
+      <publishTime>08/30/2018 12:19:13</publishTime>
+    </File>
+    <File Include="bin/pt/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:52:50</publishTime>
+    </File>
+    <File Include="bin/QiyuesuoSDK.dll">
+      <publishTime>10/22/2017 10:34:25</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:53:08</publishTime>
+    </File>
+    <File Include="bin/WebApp.dll">
+      <publishTime>11/02/2018 16:24:41</publishTime>
+    </File>
+    <File Include="bin/WebApp.pdb">
+      <publishTime>11/02/2018 16:24:41</publishTime>
+    </File>
+    <File Include="bin/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:53:48</publishTime>
+    </File>
+    <File Include="bin/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll">
+      <publishTime>06/24/2012 13:50:22</publishTime>
+    </File>
+    <File Include="cg/goto.aspx">
+      <publishTime>01/19/2015 09:40:12</publishTime>
+    </File>
+    <File Include="cg/index.aspx">
+      <publishTime>11/06/2017 10:26:43</publishTime>
+    </File>
+    <File Include="cg/index.html">
+      <publishTime>11/13/2017 12:02:24</publishTime>
+    </File>
+    <File Include="cg/QHJS.aspx">
+      <publishTime>01/17/2017 17:35:19</publishTime>
+    </File>
+    <File Include="cg/ylcb.aspx">
+      <publishTime>09/12/2017 16:14:20</publishTime>
+    </File>
+    <File Include="cg/ylcb_2.aspx">
+      <publishTime>08/31/2017 16:24:36</publishTime>
+    </File>
+    <File Include="CSS/by.png">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/experience.css">
+      <publishTime>04/01/2017 17:29:36</publishTime>
+    </File>
+    <File Include="CSS/footer.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/header.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/index_logo.png">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/ionic.css">
+      <publishTime>01/08/2016 15:48:56</publishTime>
+    </File>
+    <File Include="CSS/ionic.min.css">
+      <publishTime>01/08/2016 15:48:56</publishTime>
+    </File>
+    <File Include="CSS/jquery.mobile-1.3.2.css">
+      <publishTime>07/19/2013 18:18:04</publishTime>
+    </File>
+    <File Include="CSS/jquery.mobile.structure-1.3.2.css">
+      <publishTime>07/19/2013 18:18:04</publishTime>
+    </File>
+    <File Include="CSS/layer.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/layout.css">
+      <publishTime>07/18/2015 09:34:04</publishTime>
+    </File>
+    <File Include="CSS/List.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/Main.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/News.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/Query.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/reset.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/share_style0_16.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/style.css">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="CSS/top.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/User_Login.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/weixin_popup.css">
+      <publishTime>04/01/2017 16:33:41</publishTime>
+    </File>
+    <File Include="CSS/xtree.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="CSS/ymPrompt.css">
+      <publishTime>11/12/2014 11:17:51</publishTime>
+    </File>
+    <File Include="DINGTALK/dingtalkmoney.aspx">
+      <publishTime>03/09/2017 10:44:03</publishTime>
+    </File>
+    <File Include="DINGTALK/dingtalksalesnumber.aspx">
+      <publishTime>03/09/2017 10:43:48</publishTime>
+    </File>
+    <File Include="DINGTALKSERVER/GetAccess_token.aspx">
+      <publishTime>03/20/2017 11:36:26</publishTime>
+    </File>
+    <File Include="DINGTALKSERVER/tuling.ashx">
+      <publishTime>03/31/2017 15:14:38</publishTime>
+    </File>
+    <File Include="DINGTALKSERVER/TulingAsk.aspx">
+      <publishTime>03/31/2017 16:02:56</publishTime>
+    </File>
+    <File Include="DINGTALKSERVER/tulingaskandanswer.aspx">
+      <publishTime>04/01/2017 17:16:23</publishTime>
+    </File>
+    <File Include="gc/SunHao.aspx">
+      <publishTime>01/08/2015 13:37:54</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/blue.css">
+      <publishTime>07/19/2017 09:48:08</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bg-green.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bullet_checked.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bullet_cross.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bullet_cross_big.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bullet_cross_big_close.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/bullet_cross_white.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/comments.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/logo.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/toggle.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/toggle_blog.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/blue/images/transparent_circle.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/bg-metro.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/bullet_checked.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/bullet_cross_big.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/bullet_cross_big_close.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/bullet_cross_white.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/comments.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/toggle.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/images/toggle_blog.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/colors/metro/metro.css">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/css/idangerous.swiper.css">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/css/img/icons.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/css/img/loader.gif">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/css/style.css">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/css/swipebox.css">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/apple-touch-icon.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/apple-touch-startup-image-320x460.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/avatar.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/about.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/blog.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/clients.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/code.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/contact.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/docs.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/home.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/layout.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/map_pin.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/pencil.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/phone.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/photos.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/security.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/services.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/digg.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/facebook.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/flickr.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/google.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/pinterest.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/social/twitter.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/tools.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/top.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/travel.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/twitter.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/twitter2.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons/videos.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/about.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/blog.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/clients.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/contact.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/docs.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/home.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/photos.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/tools.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/twitter.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/icons_dark/videos.png">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/page_photo.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo1.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo10.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo11.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo2.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo3.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo4.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo5.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo6.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo7.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo8.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/photo9.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/photos/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/portfolio_thumb.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/portfolio_thumb2.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/portfolio_thumb3.jpg">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/images/Thumbs.db">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/index.aspx">
+      <publishTime>07/19/2017 14:01:32</publishTime>
+    </File>
+    <File Include="H5/DING/index.html">
+      <publishTime>07/19/2017 10:14:56</publishTime>
+    </File>
+    <File Include="H5/DING/js/code.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/js/idangerous.swiper-2.1.min.js">
+      <publishTime>07/19/2017 09:54:07</publishTime>
+    </File>
+    <File Include="H5/DING/js/idangerous.swiper.scrollbar-2.1.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/js/jquery-1.10.1.min.js">
+      <publishTime>07/19/2017 09:56:18</publishTime>
+    </File>
+    <File Include="H5/DING/js/jquery.fitvids.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/js/jquery.swipebox.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/js/jquery.tabify.js">
+      <publishTime>07/19/2017 09:56:18</publishTime>
+    </File>
+    <File Include="H5/DING/js/load.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/DING/js/twitter/jquery.tweet.js">
+      <publishTime>07/18/2017 10:15:39</publishTime>
+    </File>
+    <File Include="H5/SBTDING/.project">
+      <publishTime>07/20/2017 08:48:02</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/app.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/feedback.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/iconfont.css">
+      <publishTime>06/30/2018 13:40:48</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/icons-extra.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.dtpicker.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.imageviewer.css">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.indexedlist.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.listpicker.css">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.min.css">
+      <publishTime>06/30/2018 15:14:59</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.picker.all.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.picker.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.picker.min.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/css/mui.poppicker.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/accordion.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/actionsheet-plus.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/actionsheet.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/ad.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/ajax.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/badges.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/beecloud.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/best-practices/list-to-detail/detail.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/best-practices/list-to-detail/list-to-detail.css">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/best-practices/list-to-detail/listview.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/best-practices/list-to-detail/vue.min.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/buttons-with-badges.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/buttons-with-block.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/buttons-with-icons.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/buttons-with-loading.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/buttons.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/card.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/checkbox.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/clouddb_wilddog.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/date.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/dialog.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/dtpicker.html">
+      <publishTime>07/11/2018 16:37:28</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/echarts.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/feedback.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/grid-default.html">
+      <publishTime>06/07/2018 12:20:14</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/grid-pagination.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/guide.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/icons-extra.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/icons.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/im-chat.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/imageviewer.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/indexed-list-select.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/indexed-list.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/info.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/input.html">
+      <publishTime>11/07/2017 08:39:07</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/lazyload-image.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/list-triplex-row.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/list-with-input.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/locker-dom.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/login.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/media-list.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/modals.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/nav-nativeObj.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/nav.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/nav_transparent.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/nav_transparent_native.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/numbox.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-down.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-left-plus-main.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-left-plus-menu.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-left.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-right-plus-main.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-right-plus-menu.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/offcanvas-drag-right.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/pagination.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/picker.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/popovers.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/progressbar.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/pullrefresh.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/pullrefresh_main.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/pullrefresh_sub.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/pullrefresh_with_tab.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/radio.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/range.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/setting.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/slider-default.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/slider-native.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/slider-table-default.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/slider-table-pagination.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/slider-with-title.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/switches.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-subpage-1.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-subpage-2.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-subpage-3.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-subpage-4.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-subpage-5.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-top-webview-main.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-vertical-scroll.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-webview-main.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-webview-subpage-about.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-webview-subpage-chat.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-webview-subpage-contact.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-webview-subpage-setting.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-with-segmented-control-vertical.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-with-segmented-control.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tab-with-viewpagerindicator.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tabbar-labels-only.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tabbar-with-submenus.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tabbar.html">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tableviews-with-badges.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tableviews-with-collapses.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tableviews-with-swipe.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/tableviews.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/typography.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/examples/副本 grid-default.html">
+      <publishTime>07/20/2017 09:37:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/fonts/mui-icons-extra.ttf">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/fonts/mui.ttf">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/hrzb/input.html">
+      <publishTime>08/27/2018 14:21:37</publishTime>
+    </File>
+    <File Include="H5/SBTDING/hrzb/list-triplex-row.html">
+      <publishTime>08/27/2018 14:21:34</publishTime>
+    </File>
+    <File Include="H5/SBTDING/hrzb/media-list.html">
+      <publishTime>08/27/2018 14:21:36</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/60x60.gif">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/cbd.jpg">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/login-1.png">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/logo-1.png">
+      <publishTime>08/27/2018 14:49:14</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/logo.png">
+      <publishTime>08/03/2018 15:26:12</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/muwu.jpg">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/qrcode.png">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/shuijiao.jpg">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/images/yuantiao.jpg">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/index-menu.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/index.html">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/95516.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/ad.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/arttmpl.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/beecloud.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/city.data-3.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/city.data.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/feedback.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.dtpicker.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.imageViewer.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.indexedlist.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.lazyload.img.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.lazyload.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.listpicker.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.locker.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.min.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.picker.all.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.picker.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.picker.min.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.poppicker.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.previewimage.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.pullToRefresh.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.pullToRefresh.material.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.view.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/mui.zoom.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/update.js">
+      <publishTime>07/19/2017 15:58:03</publishTime>
+    </File>
+    <File Include="H5/SBTDING/js/webviewGroup.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/libs/echarts-all.js">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/manifest.json">
+      <publishTime>07/19/2017 15:58:04</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/grid-default_sbt.html">
+      <publishTime>07/11/2018 18:35:56</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/libs/echarts-all.js">
+      <publishTime>07/24/2017 09:55:19</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/picker.html">
+      <publishTime>07/20/2017 14:46:14</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_apply_customer.aspx">
+      <publishTime>01/11/2018 11:07:59</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_custdingtalk_cost.aspx">
+      <publishTime>09/05/2017 14:25:06</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_custdingtalk_cost_detail.aspx">
+      <publishTime>09/05/2017 14:50:11</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_custdingtalk_salecost.html">
+      <publishTime>10/06/2017 15:20:58</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_custdingtalk_salecost_target.aspx">
+      <publishTime>11/07/2017 17:20:13</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_custdingtalk_target.aspx">
+      <publishTime>08/02/2017 10:54:07</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_pigcost.html">
+      <publishTime>05/17/2018 16:51:20</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_setprice.aspx">
+      <publishTime>10/16/2018 11:54:18</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_yx_custdetail.aspx">
+      <publishTime>01/11/2018 11:04:27</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_yx_custdetail_yd.aspx">
+      <publishTime>05/16/2018 16:35:50</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_yx_custlist.aspx">
+      <publishTime>07/25/2017 09:25:16</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_yx_custlist_yd.aspx">
+      <publishTime>07/11/2018 18:12:39</publishTime>
+    </File>
+    <File Include="H5/SBTDING/sbtproject/sbt_yx_custreport.aspx">
+      <publishTime>07/24/2017 08:59:39</publishTime>
+    </File>
+    <File Include="H5/SBTDING/Technician/index.html">
+      <publishTime>09/28/2018 10:51:02</publishTime>
+    </File>
+    <File Include="H5/SBTDING/Technician/sbt_daytechnician.aspx">
+      <publishTime>11/01/2018 09:45:10</publishTime>
+    </File>
+    <File Include="H5/SBTDING/Technician/sbt_daytechnician.html">
+      <publishTime>06/30/2018 16:10:15</publishTime>
+    </File>
+    <File Include="H5/SBTDING/Technician/sbt_daytechnicianbase.aspx">
+      <publishTime>10/22/2018 08:49:00</publishTime>
+    </File>
+    <File Include="H5/SBTDING/YLBG/index.html">
+      <publishTime>11/02/2018 16:12:41</publishTime>
+    </File>
+    <File Include="H5/SBTDING/YLBG/YLDetail.html">
+      <publishTime>10/29/2018 08:40:52</publishTime>
+    </File>
+    <File Include="H5/SBTDING/YLBG/YLDetail_Sample.html">
+      <publishTime>11/02/2018 16:13:20</publishTime>
+    </File>
+    <File Include="H5/SBTDING/YLBG/YL_Edit.html">
+      <publishTime>11/02/2018 16:17:51</publishTime>
+    </File>
+    <File Include="H5/SBTDING/zhda/CH_Edit.html">
+      <publishTime>10/24/2018 09:55:25</publishTime>
+    </File>
+    <File Include="Handler/CHHandler.ashx">
+      <publishTime>10/16/2018 11:31:21</publishTime>
+    </File>
+    <File Include="Handler/JtzbHandler.ashx">
+      <publishTime>08/27/2018 14:21:42</publishTime>
+    </File>
+    <File Include="Handler/sbtht.ashx">
+      <publishTime>08/30/2018 11:05:32</publishTime>
+    </File>
+    <File Include="Handler/test.html">
+      <publishTime>08/30/2018 16:05:09</publishTime>
+    </File>
+    <File Include="Handler/YLHandler.ashx">
+      <publishTime>10/24/2018 11:47:26</publishTime>
+    </File>
+    <File Include="images/gcylbb.png">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="images/gcylgl.png">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="images/lineTitle.gif">
+      <publishTime>11/12/2014 11:17:59</publishTime>
+    </File>
+    <File Include="images/logo2.png">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="images/ok.gif">
+      <publishTime>11/12/2014 11:17:59</publishTime>
+    </File>
+    <File Include="images/reset.gif">
+      <publishTime>11/12/2014 11:18:03</publishTime>
+    </File>
+    <File Include="images/xzzx.png">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>06/22/2015 13:59:35</publishTime>
+    </File>
+    <File Include="menuCentre.aspx">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="MOVIE/movie.mp4">
+      <publishTime>07/18/2015 10:12:55</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/API.wsdl">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/configuration.svcinfo">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/configuration91.svcinfo">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/Reference.svcmap">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference1/WebApp.ServiceReference1.ReturnInfo.datasource">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/configuration.svcinfo">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/configuration91.svcinfo">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/Reference.svcmap">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/userinterface.disco">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/userinterface.wsdl">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference2/WebApp.ServiceReference2.ReturnValue.datasource">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference3/API.wsdl">
+      <publishTime>06/22/2015 13:59:39</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference3/configuration.svcinfo">
+      <publishTime>06/22/2015 13:59:38</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference3/configuration91.svcinfo">
+      <publishTime>06/22/2015 13:59:39</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference3/Reference.svcmap">
+      <publishTime>06/22/2015 13:59:39</publishTime>
+    </File>
+    <File Include="Service References/ServiceReference3/WebApp.ServiceReference3.ReturnInfo.datasource">
+      <publishTime>06/22/2015 13:59:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/29/2018 09:15:22</publishTime>
+    </File>
+    <File Include="WeiChart/WeiChartHandler.ashx">
+      <publishTime>10/08/2015 19:51:13</publishTime>
+    </File>
+    <File Include="yf/Farmprofit.aspx">
+      <publishTime>09/08/2015 19:02:17</publishTime>
+    </File>
+    <File Include="yf/index.aspx">
+      <publishTime>11/12/2014 11:18:07</publishTime>
+    </File>
+    <File Include="yf/SL/SLCost.aspx">
+      <publishTime>07/23/2015 17:14:27</publishTime>
+    </File>
+    <File Include="ylzjkcgl/dqylkc.aspx">
+      <publishTime>09/08/2015 13:19:10</publishTime>
+    </File>
+    <File Include="ylzjkcgl/lsylkc.aspx">
+      <publishTime>06/22/2015 13:59:35</publishTime>
+    </File>
+    <File Include="ylzjkcgl/ylkcForm.aspx">
+      <publishTime>06/22/2015 13:59:39</publishTime>
+    </File>
+    <File Include="yx/css/cabel-v1.css">
+      <publishTime>11/12/2014 11:18:07</publishTime>
+    </File>
+    <File Include="yx/dmnrrjg.aspx">
+      <publishTime>11/12/2014 11:18:07</publishTime>
+    </File>
+    <File Include="yx/FeedContrast/FeedContrast.aspx">
+      <publishTime>07/23/2015 16:39:56</publishTime>
+    </File>
+    <File Include="yx/hreffeiyong.aspx">
+      <publishTime>11/12/2014 11:18:12</publishTime>
+    </File>
+    <File Include="yx/images/2355模式.jpg">
+      <publishTime>11/12/2014 11:18:14</publishTime>
+    </File>
+    <File Include="yx/images/369.jpg">
+      <publishTime>01/19/2015 09:40:12</publishTime>
+    </File>
+    <File Include="yx/images/4133.jpg">
+      <publishTime>11/12/2014 11:18:13</publishTime>
+    </File>
+    <File Include="yx/images/4133_1.jpg">
+      <publishTime>11/12/2014 11:18:13</publishTime>
+    </File>
+    <File Include="yx/images/62040.jpg">
+      <publishTime>11/12/2014 11:18:14</publishTime>
+    </File>
+    <File Include="yx/images/62040_1.jpg">
+      <publishTime>11/12/2014 11:18:13</publishTime>
+    </File>
+    <File Include="yx/images/dmnrrjg.gif">
+      <publishTime>11/12/2014 11:18:13</publishTime>
+    </File>
+    <File Include="yx/images/noing.gif">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/sxfy.gif">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/untitled_1.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zbsxfy.gif">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/closebox.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/spacer.gif">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-caption-fill.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-caption-l.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-caption-r.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow1.png">
+      <publishTime>11/12/2014 11:18:16</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow2.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow3.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow4.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow5.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow6.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow7.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-shadow8.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-1.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-10.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-11.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-12.png">
+      <publishTime>11/12/2014 11:18:19</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-2.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-3.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-4.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-5.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-6.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-7.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-8.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/zoom/zoom-spin-9.png">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/大某农模式宣传.jpg">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/images/某大模式宣传.jpg">
+      <publishTime>11/12/2014 11:18:22</publishTime>
+    </File>
+    <File Include="yx/index.aspx">
+      <publishTime>09/13/2016 15:54:28</publishTime>
+    </File>
+    <File Include="yx/js/FancyZoom.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/js/FancyZoomHTML.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/js/ionic-angular.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/ionic-angular.min.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/ionic.bundle.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/ionic.bundle.min.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/ionic.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/ionic.min.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/jquery-1.3.2.min.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/js/jquery.js">
+      <publishTime>05/06/2017 09:02:58</publishTime>
+    </File>
+    <File Include="yx/js/jquery.mobile-1.3.2.min.js">
+      <publishTime>08/31/2016 17:21:30</publishTime>
+    </File>
+    <File Include="yx/js/prototype.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/js/searchDataTipApp.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/js/WdatePicker.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/calendar.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/config.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/lang/en.js">
+      <publishTime>11/12/2014 11:18:29</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/lang/zh-cn.js">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/lang/zh-tw.js">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/My97DatePicker.htm">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/datePicker.gif">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/default/datepicker.css">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/default/img.gif">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/WdatePicker.css">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/whyGreen/bg.jpg">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/whyGreen/datepicker.css">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/skin/whyGreen/img.gif">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/WdatePicker.js">
+      <publishTime>11/12/2014 11:18:32</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/lang/en.js">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/lang/zh-cn.js">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/lang/zh-tw.js">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/readme.txt">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/datePicker.gif">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/default/datepicker.css">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/default/img.gif">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/WdatePicker.css">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/whyGreen/bg.jpg">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/whyGreen/datepicker.css">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/My97DatePicker/开发包/skin/whyGreen/img.gif">
+      <publishTime>11/12/2014 11:18:35</publishTime>
+    </File>
+    <File Include="yx/PigCost/PigCost.aspx">
+      <publishTime>07/23/2015 16:43:18</publishTime>
+    </File>
+    <File Include="yx/saleTarget.aspx">
+      <publishTime>05/06/2017 15:59:02</publishTime>
+    </File>
+    <File Include="yx/SBTMap.aspx">
+      <publishTime>08/31/2017 18:14:49</publishTime>
+    </File>
+    <File Include="yx/sbt_QualityComplaints.aspx">
+      <publishTime>09/13/2016 15:19:32</publishTime>
+    </File>
+    <File Include="yx/sbt_salary.aspx">
+      <publishTime>09/12/2016 09:04:58</publishTime>
+    </File>
+    <File Include="yx/tool1.aspx">
+      <publishTime>06/24/2015 20:08:49</publishTime>
+    </File>
+    <File Include="yx/tool2.aspx">
+      <publishTime>01/10/2015 09:44:40</publishTime>
+    </File>
+    <File Include="yx/tool3.aspx">
+      <publishTime>01/19/2015 09:50:08</publishTime>
+    </File>
+    <File Include="yx/tool4.aspx">
+      <publishTime>01/19/2015 09:49:57</publishTime>
+    </File>
+    <File Include="yx/tool_SBT_SZ.aspx">
+      <publishTime>09/12/2016 10:12:12</publishTime>
+    </File>
+    <File Include="yx/tool_SZ.aspx">
+      <publishTime>10/28/2015 10:04:47</publishTime>
+    </File>
+    <File Include="yx/WebService1.asmx">
+      <publishTime>11/12/2014 11:18:39</publishTime>
+    </File>
+    <File Include="yx/weixin/ActiveList.aspx">
+      <publishTime>07/09/2015 10:03:14</publishTime>
+    </File>
+    <File Include="yx/weixin/SalePlanList.aspx">
+      <publishTime>01/29/2015 16:51:41</publishTime>
+    </File>
+    <File Include="yx/weixin/SalesPlan.aspx">
+      <publishTime>03/11/2015 17:35:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+    <title>test</title>
+</head>
+<body>
+    <div id="divid">hello world</div>
+    <form>
+        <table>
+            <tr>
+                <td class="mainTd_7_1">
+                    <div><a href="http://www.baidu.com">sdfsd</a></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+
+    $.ajax({
+        url: "http://172.17.2.50:88/Handler/sbtht.ashx",
+
+        data: {
+            contractID: "2472607756301455386"
+        },
+        type: "get",
+        success: function (data) {
+            //  alert(data)
+            document.getElementById("divid").innerHTML = data;
+            //   window.location.reload();
+            var list = document.getElementsByTagName("td");
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].className == "mainTd_7_1") {
+                    list[0].innerHTML = "<a href='" + data + "'>点击查阅合同</a>";
+                }
+            }
+
+        },
+        error: function (xhr, type, errorThrown) {
+            //异常处理；
+            console.log(type);
+            alert("错误");
+        }
+    });
+</script>

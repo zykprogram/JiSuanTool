@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SBTJT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title"><b id="times"></b></h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-content-padded" style="margin: 2px;">
+            <h5>本月工作事项：</h5>
+            <div class="mui-input-row">
+                <textarea id="titles" rows="3" placeholder="工作事项"></textarea>
+            </div>
+            <h5>工作路径：</h5>
+            <div class="mui-input-row">
+                <textarea id="types" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>本周完成：</h5>
+            <div class="mui-input-row">
+                <textarea id="content" rows="1" placeholder=""></textarea>
+            </div>
+            <div class="mui-input-row">
+                <label>完成进度</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="rate" onkeyup="JudgeValue()" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <form id="btn_form" class="mui-input-group">
+                <div class="mui-button-row">
+                    <button type="button" class="mui-btn mui-btn-primary" onclick="ClickSure()">确认</button>&nbsp;&nbsp;
+                    <button type="button" class="mui-btn mui-btn-danger" onclick="javascript:window.history.go(-1);">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        var months;
+        var weeks;
+        var user_id;
+        var id;
+
+        //初始化加载界面内容
+        $(document).ready(function () {
+            //判断是否有历史数据
+            id = getQueryString('id') == null ? "" : getQueryString('id');
+            if (id == "") {
+                months = getQueryString('months');
+                weeks = getQueryString('weeks');
+                user_id = getQueryString('user_id');
+                document.getElementById("times").innerHTML = months.replace("-", "年") + "月" + "第" + weeks + "周";
+            }
+            else {
+                $.ajax({
+                    url: "../../../Handler/JtzbHandler.ashx?type=Get",
+                    type: "post",
+                    data: { id: id },
+                    dataType: "json",
+                    success: function (data) {
+                        document.getElementById("titles").value = data.TITLE;
+                        document.getElementById("types").value = data.TYPE;
+                        document.getElementById("content").value = data.CONTENT;
+                        document.getElementById("rate").value = data.RATE;
+                        debugger;
+                        months = data.MONTH;
+                        weeks = data.WEEK;
+                        user_id = data.USERID;
+                        document.getElementById("times").innerHTML = months.replace("-", "年") + "月" + "第" + weeks + "周";
+                        if (data.STATUS == 1) {
+                            document.getElementById("titles").readOnly = true;
+                            document.getElementById("types").readOnly = true;
+                            document.getElementById("content").readOnly = true;
+                            document.getElementById("rate").readOnly = true;
+                            $(".mui-btn-numbox-minus,.mui-btn-numbox-plus").hide();
+                            $("#btn_form").hide();
+                        }
+                    }
+                });
+            }
+        });
+
+        //提交新增or修改
+        function ClickSure() {
+            var title = document.getElementById("titles").value;
+            var types = document.getElementById("types").value;
+            var content = document.getElementById("content").value;
+            var rate = document.getElementById("rate").value;
+            if (id == "") {
+                $.ajax({
+                    url: "../../../Handler/JtzbHandler.ashx?type=Add",
+                    type: "post",
+                    data: { user_id: user_id, months: months, weeks: weeks, title: title, types: types, content: content, rate: rate },
+                    dataType: "json",
+                    success: function (data) {
+                        alert(data.result);
+                    }
+                });
+            }
+            else {
+                $.ajax({
+                    url: "../../../Handler/JtzbHandler.ashx?type=Edit",
+                    type: "post",
+                    data: { id: id, title: title, types: types, content: content, rate: rate },
+                    dataType: "json",
+                    success: function (data) {
+                        alert(data.result);
+                    }
+                });
+            }
+            window.history.go(-1);
+        }
+
+        /*mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        //语音识别完成事件
+        document.getElementById("search").addEventListener('recognized', function (e) {
+            console.log(e.detail.value);
+        });
+
+        var nativeWebview, imm, InputMethodManager;
+        var initNativeObjects = function () {
+            if (mui.os.android) {
+                var main = plus.android.runtimeMainActivity();
+                var Context = plus.android.importClass("android.content.Context");
+                InputMethodManager = plus.android.importClass("android.view.inputmethod.InputMethodManager");
+                imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);
+            } else {
+                nativeWebview = plus.webview.currentWebview().nativeInstanceObject();
+            }
+        };
+        var showSoftInput = function () {
+            if (mui.os.android) {
+                imm.toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+            } else {
+                nativeWebview.plusCallMethod({
+                    "setKeyboardDisplayRequiresUserAction": false
+                });
+            }
+            setTimeout(function () {
+                var inputElem = document.querySelector('input');
+                inputElem.focus();
+                inputElem.parentNode.classList.add('mui-active'); //第一个是search，加上激活样式
+            }, 200);
+        };
+        mui.plusReady(function () {
+            initNativeObjects();
+            showSoftInput();
+        });*/
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+
+        function JudgeValue() {
+            var num = document.getElementById("rate").value;
+            var reg = /^((?!0)\d{1,2}|100)$/;
+            if (!num.match(reg)) {
+                alert("请输入0~100数字");
+                document.getElementById("rate").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+/**
+ * @名称: style   
+ * @功能: 重设浏览器默认样式
+ * @更新: 2014.11.21
+ * @作者: yuguoliang
+ * @博客：http://www.cssw3c.com
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+html, body {
+	font:14px/1.5 Helvetica,"微软雅黑","黑体",Arial,Tahoma;
+	height:100%; 
+	color:#fff; 
+	text-align:center; 
+	background-color:#ef3239;
+}
+
+#wrapper_ygl {
+	margin:0 auto;
+	width:320px;
+    height:100%; 
+}
+
+#wrapper_ygl .logo{
+	height:200px;
+	background:url(../images/logo2.png) center 60px no-repeat;
+}
+
+#wrapper_ygl input{
+	margin-bottom:20px;
+	width:280px;
+	height:40px;
+	line-height:40px;
+	text-align:center; 
+	color:#fff; 
+	font-size:14px;
+	border:1px solid #f3baaa;
+	background-color:transparent;
+}
+#wrapper_ygl .btn{
+	font:bold 14px/1.5 Helvetica,"微软雅黑","黑体",Arial,Tahoma;
+	color:#ef3239!important; 
+	background-color:#fff;
+	border:0;
+	cursor:pointer;
+	-webkit-box-shadow:2px 3px 4px #871f12;  
+  	-moz-box-shadow:2px 3px 4px #871f12;
+  	box-shadow:2px 3px 4px #871f12;
+}
+#wrapper_ygl .btn2{
+	cursor:pointer;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#fff;
+}
+
+
+
+
+

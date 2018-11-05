@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{109C67E1-721E-4299-8592-78D2D15573CA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="agsXMPP, Version=1.1.0.0, Culture=neutral, PublicKeyToken=ff839b81f1debe86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\agsXMPP.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.429, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager">
+      <HintPath>..\lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="BasePage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SBTCN\lib\BasePage.dll</HintPath>
+    </Reference>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SBTCN\lib\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DBUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SBTCN\lib\DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpTool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HttpTool.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>C:\Users\admin\Desktop\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PrivateSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PrivateSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="QiyuesuoSDK, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\QiyuesuoSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cg\goto.aspx" />
+    <Content Include="cg\index.html" />
+    <Content Include="cg\QHJS.aspx" />
+    <Content Include="cg\ylcb_2.aspx" />
+    <Content Include="cg\ylcb.aspx" />
+    <Content Include="cg\index.aspx" />
+    <Content Include="CSS\by.png" />
+    <Content Include="CSS\experience.css" />
+    <Content Include="CSS\footer.css" />
+    <Content Include="CSS\header.css" />
+    <Content Include="CSS\index_logo.png" />
+    <Content Include="CSS\ionic.css" />
+    <Content Include="CSS\ionic.min.css" />
+    <Content Include="CSS\jquery.mobile-1.3.2.css" />
+    <Content Include="CSS\jquery.mobile.structure-1.3.2.css" />
+    <Content Include="CSS\layer.css" />
+    <Content Include="CSS\layout.css" />
+    <Content Include="CSS\List.css" />
+    <Content Include="CSS\Main.css" />
+    <Content Include="CSS\News.css" />
+    <Content Include="CSS\Query.css" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CSS\share_style0_16.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\top.css" />
+    <Content Include="CSS\User_Login.css" />
+    <Content Include="CSS\weixin_popup.css" />
+    <Content Include="CSS\xtree.css" />
+    <Content Include="CSS\ymPrompt.css" />
+    <Content Include="DINGTALKSERVER\GetAccess_token.aspx" />
+    <Content Include="DINGTALKSERVER\TulingAsk.aspx" />
+    <Content Include="DINGTALKSERVER\tulingaskandanswer.aspx" />
+    <Content Include="gc\SunHao.aspx" />
+    <Content Include="H5\SBTDING\css\app.css" />
+    <Content Include="H5\SBTDING\css\feedback.css" />
+    <Content Include="H5\SBTDING\css\iconfont.css" />
+    <Content Include="H5\SBTDING\css\icons-extra.css" />
+    <Content Include="H5\SBTDING\css\mui.dtpicker.css" />
+    <Content Include="H5\SBTDING\css\mui.imageviewer.css" />
+    <Content Include="H5\SBTDING\css\mui.indexedlist.css" />
+    <Content Include="H5\SBTDING\css\mui.listpicker.css" />
+    <Content Include="H5\SBTDING\css\mui.min.css" />
+    <Content Include="H5\SBTDING\css\mui.picker.all.css" />
+    <Content Include="H5\SBTDING\css\mui.picker.css" />
+    <Content Include="H5\SBTDING\css\mui.picker.min.css" />
+    <Content Include="H5\SBTDING\css\mui.poppicker.css" />
+    <Content Include="H5\SBTDING\examples\accordion.html" />
+    <Content Include="H5\SBTDING\examples\actionsheet-plus.html" />
+    <Content Include="H5\SBTDING\examples\actionsheet.html" />
+    <Content Include="H5\SBTDING\examples\ad.html" />
+    <Content Include="H5\SBTDING\examples\ajax.html" />
+    <Content Include="H5\SBTDING\examples\badges.html" />
+    <Content Include="H5\SBTDING\examples\beecloud.html" />
+    <Content Include="H5\SBTDING\examples\best-practices\list-to-detail\detail.html" />
+    <Content Include="H5\SBTDING\examples\best-practices\list-to-detail\list-to-detail.css" />
+    <Content Include="H5\SBTDING\examples\best-practices\list-to-detail\listview.html" />
+    <Content Include="H5\SBTDING\examples\best-practices\list-to-detail\vue.min.js" />
+    <Content Include="H5\SBTDING\examples\buttons-with-badges.html" />
+    <Content Include="H5\SBTDING\examples\buttons-with-block.html" />
+    <Content Include="H5\SBTDING\examples\buttons-with-icons.html" />
+    <Content Include="H5\SBTDING\examples\buttons-with-loading.html" />
+    <Content Include="H5\SBTDING\examples\buttons.html" />
+    <Content Include="H5\SBTDING\examples\card.html" />
+    <Content Include="H5\SBTDING\examples\checkbox.html" />
+    <Content Include="H5\SBTDING\examples\clouddb_wilddog.html" />
+    <Content Include="H5\SBTDING\examples\date.html" />
+    <Content Include="H5\SBTDING\examples\dialog.html" />
+    <Content Include="H5\SBTDING\examples\dtpicker.html" />
+    <Content Include="H5\SBTDING\examples\echarts.html" />
+    <Content Include="H5\SBTDING\examples\feedback.html" />
+    <Content Include="H5\SBTDING\examples\grid-default.html" />
+    <Content Include="H5\SBTDING\examples\grid-pagination.html" />
+    <Content Include="H5\SBTDING\examples\guide.html" />
+    <Content Include="H5\SBTDING\examples\icons-extra.html" />
+    <Content Include="H5\SBTDING\examples\icons.html" />
+    <Content Include="H5\SBTDING\examples\im-chat.html" />
+    <Content Include="H5\SBTDING\examples\imageviewer.html" />
+    <Content Include="H5\SBTDING\examples\indexed-list-select.html" />
+    <Content Include="H5\SBTDING\examples\indexed-list.html" />
+    <Content Include="H5\SBTDING\examples\info.html" />
+    <Content Include="H5\SBTDING\examples\input.html" />
+    <Content Include="H5\SBTDING\examples\lazyload-image.html" />
+    <Content Include="H5\SBTDING\examples\list-triplex-row.html" />
+    <Content Include="H5\SBTDING\examples\list-with-input.html" />
+    <Content Include="H5\SBTDING\examples\locker-dom.html" />
+    <Content Include="H5\SBTDING\examples\login.html" />
+    <Content Include="H5\SBTDING\examples\media-list.html" />
+    <Content Include="H5\SBTDING\examples\modals.html" />
+    <Content Include="H5\SBTDING\examples\nav-nativeObj.html" />
+    <Content Include="H5\SBTDING\examples\nav.html" />
+    <Content Include="H5\SBTDING\examples\nav_transparent.html" />
+    <Content Include="H5\SBTDING\examples\nav_transparent_native.html" />
+    <Content Include="H5\SBTDING\examples\numbox.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-down.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-left-plus-main.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-left-plus-menu.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-left.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-right-plus-main.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-right-plus-menu.html" />
+    <Content Include="H5\SBTDING\examples\offcanvas-drag-right.html" />
+    <Content Include="H5\SBTDING\examples\pagination.html" />
+    <Content Include="H5\SBTDING\examples\picker.html" />
+    <Content Include="H5\SBTDING\examples\popovers.html" />
+    <Content Include="H5\SBTDING\examples\progressbar.html" />
+    <Content Include="H5\SBTDING\examples\pullrefresh.html" />
+    <Content Include="H5\SBTDING\examples\pullrefresh_main.html" />
+    <Content Include="H5\SBTDING\examples\pullrefresh_sub.html" />
+    <Content Include="H5\SBTDING\examples\pullrefresh_with_tab.html" />
+    <Content Include="H5\SBTDING\examples\radio.html" />
+    <Content Include="H5\SBTDING\examples\range.html" />
+    <Content Include="H5\SBTDING\examples\setting.html" />
+    <Content Include="H5\SBTDING\examples\slider-default.html" />
+    <Content Include="H5\SBTDING\examples\slider-native.html" />
+    <Content Include="H5\SBTDING\examples\slider-table-default.html" />
+    <Content Include="H5\SBTDING\examples\slider-table-pagination.html" />
+    <Content Include="H5\SBTDING\examples\slider-with-title.html" />
+    <Content Include="H5\SBTDING\examples\switches.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-subpage-1.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-subpage-2.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-subpage-3.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-subpage-4.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-subpage-5.html" />
+    <Content Include="H5\SBTDING\examples\tab-top-webview-main.html" />
+    <Content Include="H5\SBTDING\examples\tab-vertical-scroll.html" />
+    <Content Include="H5\SBTDING\examples\tab-webview-main.html" />
+    <Content Include="H5\SBTDING\examples\tab-webview-subpage-about.html" />
+    <Content Include="H5\SBTDING\examples\tab-webview-subpage-chat.html" />
+    <Content Include="H5\SBTDING\examples\tab-webview-subpage-contact.html" />
+    <Content Include="H5\SBTDING\examples\tab-webview-subpage-setting.html" />
+    <Content Include="H5\SBTDING\examples\tab-with-segmented-control-vertical.html" />
+    <Content Include="H5\SBTDING\examples\tab-with-segmented-control.html" />
+    <Content Include="H5\SBTDING\examples\tab-with-viewpagerindicator.html" />
+    <Content Include="H5\SBTDING\examples\tabbar-labels-only.html" />
+    <Content Include="H5\SBTDING\examples\tabbar-with-submenus.html" />
+    <Content Include="H5\SBTDING\examples\tabbar.html" />
+    <Content Include="H5\SBTDING\examples\tableviews-with-badges.html" />
+    <Content Include="H5\SBTDING\examples\tableviews-with-collapses.html" />
+    <Content Include="H5\SBTDING\examples\tableviews-with-swipe.html" />
+    <Content Include="H5\SBTDING\examples\tableviews.html" />
+    <Content Include="H5\SBTDING\examples\typography.html" />
+    <Content Include="H5\SBTDING\examples\副本 grid-default.html" />
+    <Content Include="H5\SBTDING\hrzb\input.html" />
+    <Content Include="H5\SBTDING\hrzb\list-triplex-row.html" />
+    <Content Include="H5\SBTDING\hrzb\media-list.html" />
+    <Content Include="H5\SBTDING\images\60x60.gif" />
+    <Content Include="H5\SBTDING\images\cbd.jpg" />
+    <Content Include="H5\SBTDING\images\logo-1.png" />
+    <Content Include="H5\SBTDING\images\logo.png" />
+    <Content Include="H5\SBTDING\images\muwu.jpg" />
+    <Content Include="H5\SBTDING\images\qrcode.png" />
+    <Content Include="H5\SBTDING\images\shuijiao.jpg" />
+    <Content Include="H5\SBTDING\images\yuantiao.jpg" />
+    <Content Include="H5\SBTDING\index-menu.html" />
+    <Content Include="H5\SBTDING\index.html" />
+    <Content Include="H5\SBTDING\js\95516.js" />
+    <Content Include="H5\SBTDING\js\ad.js" />
+    <Content Include="H5\SBTDING\js\arttmpl.js" />
+    <Content Include="H5\SBTDING\js\beecloud.js" />
+    <Content Include="H5\SBTDING\js\city.data-3.js" />
+    <Content Include="H5\SBTDING\js\city.data.js" />
+    <Content Include="H5\SBTDING\js\feedback.js" />
+    <Content Include="H5\SBTDING\js\mui.dtpicker.js" />
+    <Content Include="H5\SBTDING\js\mui.imageViewer.js" />
+    <Content Include="H5\SBTDING\js\mui.indexedlist.js" />
+    <Content Include="H5\SBTDING\js\mui.js" />
+    <Content Include="H5\SBTDING\js\mui.lazyload.img.js" />
+    <Content Include="H5\SBTDING\js\mui.lazyload.js" />
+    <Content Include="H5\SBTDING\js\mui.listpicker.js" />
+    <Content Include="H5\SBTDING\js\mui.locker.js" />
+    <Content Include="H5\SBTDING\js\mui.min.js" />
+    <Content Include="H5\SBTDING\js\mui.picker.all.js" />
+    <Content Include="H5\SBTDING\js\mui.picker.js" />
+    <Content Include="H5\SBTDING\js\mui.picker.min.js" />
+    <Content Include="H5\SBTDING\js\mui.poppicker.js" />
+    <Content Include="H5\SBTDING\js\mui.previewimage.js" />
+    <Content Include="H5\SBTDING\js\mui.pullToRefresh.js" />
+    <Content Include="H5\SBTDING\js\mui.pullToRefresh.material.js" />
+    <Content Include="H5\SBTDING\js\mui.view.js" />
+    <Content Include="H5\SBTDING\js\mui.zoom.js" />
+    <Content Include="H5\SBTDING\js\update.js" />
+    <Content Include="H5\SBTDING\js\webviewGroup.js" />
+    <Content Include="H5\SBTDING\libs\echarts-all.js" />
+    <Content Include="H5\SBTDING\sbtproject\grid-default_sbt.html" />
+    <Content Include="H5\SBTDING\sbtproject\libs\echarts-all.js" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_apply_customer.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_pigcost.html" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_setprice.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_yx_custdetail.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_yx_custlist.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_yx_custreport.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_yx_custdetail_yd.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_yx_custlist_yd.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost_detail.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_custdingtalk_salecost_target.aspx" />
+    <Content Include="H5\SBTDING\sbtproject\sbt_custdingtalk_salecost.html" />
+    <Content Include="H5\SBTDING\Technician\index.html" />
+    <Content Include="H5\SBTDING\Technician\sbt_daytechnician.aspx" />
+    <Content Include="H5\SBTDING\Technician\sbt_daytechnicianbase.aspx" />
+    <Content Include="H5\SBTDING\YLBG\index.html" />
+    <Content Include="H5\SBTDING\YLBG\YLDetail.html" />
+    <Content Include="H5\SBTDING\YLBG\YLDetail_Sample.html" />
+    <Content Include="H5\SBTDING\YLBG\YL_Edit.html" />
+    <Content Include="H5\SBTDING\zhda\CH_Edit.html" />
+    <Content Include="Handler\test.html" />
+    <Content Include="images\gcylbb.png" />
+    <Content Include="images\gcylgl.png" />
+    <Content Include="images\xzzx.png" />
+    <Content Include="images\lineTitle.gif" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\ok.gif" />
+    <Content Include="images\reset.gif" />
+    <Content Include="login.aspx" />
+    <Content Include="menuCentre.aspx" />
+    <Content Include="MOVIE\movie.mp4" />
+    <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service References\ServiceReference2\userinterface.disco" />
+    <Content Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service References\ServiceReference3\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference3\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="yf\Farmprofit.aspx" />
+    <Content Include="yf\index.aspx" />
+    <Content Include="yf\SL\SLCost.aspx" />
+    <Content Include="ylzjkcgl\dqylkc.aspx" />
+    <Content Include="ylzjkcgl\lsylkc.aspx" />
+    <Content Include="ylzjkcgl\ylkcForm.aspx" />
+    <Content Include="yx\css\cabel-v1.css" />
+    <Content Include="yx\dmnrrjg.aspx" />
+    <Content Include="yx\FeedContrast\FeedContrast.aspx" />
+    <Content Include="yx\hreffeiyong.aspx" />
+    <Content Include="yx\images\2355模式.jpg" />
+    <Content Include="yx\images\369.jpg" />
+    <Content Include="yx\images\4133.jpg" />
+    <Content Include="yx\images\4133_1.jpg" />
+    <Content Include="yx\images\62040.jpg" />
+    <Content Include="yx\images\62040_1.jpg" />
+    <Content Include="yx\images\dmnrrjg.gif" />
+    <Content Include="yx\images\noing.gif" />
+    <Content Include="yx\images\sxfy.gif" />
+    <Content Include="yx\images\untitled_1.png" />
+    <Content Include="yx\images\zbsxfy.gif" />
+    <Content Include="yx\images\zoom\closebox.png" />
+    <Content Include="yx\images\zoom\spacer.gif" />
+    <Content Include="yx\images\zoom\zoom-caption-fill.png" />
+    <Content Include="yx\images\zoom\zoom-caption-l.png" />
+    <Content Include="yx\images\zoom\zoom-caption-r.png" />
+    <Content Include="yx\images\zoom\zoom-shadow1.png" />
+    <Content Include="yx\images\zoom\zoom-shadow2.png" />
+    <Content Include="yx\images\zoom\zoom-shadow3.png" />
+    <Content Include="yx\images\zoom\zoom-shadow4.png" />
+    <Content Include="yx\images\zoom\zoom-shadow5.png" />
+    <Content Include="yx\images\zoom\zoom-shadow6.png" />
+    <Content Include="yx\images\zoom\zoom-shadow7.png" />
+    <Content Include="yx\images\zoom\zoom-shadow8.png" />
+    <Content Include="yx\images\zoom\zoom-spin-1.png" />
+    <Content Include="yx\images\zoom\zoom-spin-10.png" />
+    <Content Include="yx\images\zoom\zoom-spin-11.png" />
+    <Content Include="yx\images\zoom\zoom-spin-12.png" />
+    <Content Include="yx\images\zoom\zoom-spin-2.png" />
+    <Content Include="yx\images\zoom\zoom-spin-3.png" />
+    <Content Include="yx\images\zoom\zoom-spin-4.png" />
+    <Content Include="yx\images\zoom\zoom-spin-5.png" />
+    <Content Include="yx\images\zoom\zoom-spin-6.png" />
+    <Content Include="yx\images\zoom\zoom-spin-7.png" />
+    <Content Include="yx\images\zoom\zoom-spin-8.png" />
+    <Content Include="yx\images\zoom\zoom-spin-9.png" />
+    <Content Include="yx\images\大某农模式宣传.jpg" />
+    <Content Include="yx\images\某大模式宣传.jpg" />
+    <Content Include="yx\index.aspx" />
+    <Content Include="yx\js\FancyZoom.js" />
+    <Content Include="yx\js\FancyZoomHTML.js" />
+    <Content Include="yx\js\ionic-angular.js" />
+    <Content Include="yx\js\ionic-angular.min.js" />
+    <Content Include="yx\js\ionic.bundle.js" />
+    <Content Include="yx\js\ionic.bundle.min.js" />
+    <Content Include="yx\js\ionic.js" />
+    <Content Include="yx\js\ionic.min.js" />
+    <Content Include="yx\js\jquery-1.3.2.min.js" />
+    <Content Include="yx\js\jquery.js" />
+    <Content Include="yx\js\jquery.mobile-1.3.2.min.js" />
+    <Content Include="yx\js\prototype.js" />
+    <Content Include="yx\js\searchDataTipApp.js" />
+    <Content Include="yx\js\WdatePicker.js" />
+    <Content Include="yx\My97DatePicker\calendar.js" />
+    <Content Include="yx\My97DatePicker\config.js" />
+    <Content Include="yx\My97DatePicker\lang\en.js" />
+    <Content Include="yx\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="yx\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="yx\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="yx\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="yx\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="yx\My97DatePicker\skin\default\img.gif" />
+    <Content Include="yx\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="yx\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="yx\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="yx\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="yx\My97DatePicker\WdatePicker.js" />
+    <Content Include="yx\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="yx\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="yx\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="yx\My97DatePicker\开发包\readme.txt" />
+    <Content Include="yx\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="yx\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="yx\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="yx\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="yx\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="yx\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="yx\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="yx\PigCost\PigCost.aspx" />
+    <Content Include="yx\saleTarget.aspx" />
+    <Content Include="yx\sbt_QualityComplaints.aspx" />
+    <Content Include="yx\SBTMap.aspx" />
+    <Content Include="yx\sbt_salary.aspx" />
+    <Content Include="yx\tool1.aspx" />
+    <Content Include="yx\tool2.aspx" />
+    <Content Include="yx\tool3.aspx" />
+    <Content Include="yx\tool4.aspx" />
+    <Content Include="yx\tool_SZ.aspx" />
+    <Content Include="yx\WebService1.asmx" />
+    <Content Include="yx\weixin\ActiveList.aspx" />
+    <Content Include="yx\weixin\SalePlanList.aspx" />
+    <Content Include="yx\weixin\SalesPlan.aspx" />
+    <Content Include="yx\tool_SBT_SZ.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cg\goto.aspx.cs">
+      <DependentUpon>goto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cg\goto.aspx.designer.cs">
+      <DependentUpon>goto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cg\QHJS.aspx.cs">
+      <DependentUpon>QHJS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cg\QHJS.aspx.designer.cs">
+      <DependentUpon>QHJS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cg\ylcb_2.aspx.cs">
+      <DependentUpon>ylcb_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cg\ylcb_2.aspx.designer.cs">
+      <DependentUpon>ylcb_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cg\ylcb.aspx.cs">
+      <DependentUpon>ylcb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cg\ylcb.aspx.designer.cs">
+      <DependentUpon>ylcb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cg\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cg\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\GetAccess_token.aspx.cs">
+      <DependentUpon>GetAccess_token.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\GetAccess_token.aspx.designer.cs">
+      <DependentUpon>GetAccess_token.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\tuling.ashx.cs">
+      <DependentUpon>tuling.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\TulingAsk.aspx.cs">
+      <DependentUpon>TulingAsk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\TulingAsk.aspx.designer.cs">
+      <DependentUpon>TulingAsk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\tulingaskandanswer.aspx.cs">
+      <DependentUpon>tulingaskandanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DINGTALKSERVER\tulingaskandanswer.aspx.designer.cs">
+      <DependentUpon>tulingaskandanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gc\SunHao.aspx.cs">
+      <DependentUpon>SunHao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gc\SunHao.aspx.designer.cs">
+      <DependentUpon>SunHao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost.aspx.cs">
+      <DependentUpon>sbt_custdingtalk_cost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost.aspx.designer.cs">
+      <DependentUpon>sbt_custdingtalk_cost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_apply_customer.aspx.cs">
+      <DependentUpon>sbt_apply_customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_apply_customer.aspx.designer.cs">
+      <DependentUpon>sbt_apply_customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_setprice.aspx.cs">
+      <DependentUpon>sbt_setprice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_setprice.aspx.designer.cs">
+      <DependentUpon>sbt_setprice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custdetail.aspx.cs">
+      <DependentUpon>sbt_yx_custdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custdetail.aspx.designer.cs">
+      <DependentUpon>sbt_yx_custdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custlist.aspx.cs">
+      <DependentUpon>sbt_yx_custlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custlist.aspx.designer.cs">
+      <DependentUpon>sbt_yx_custlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custreport.aspx.cs">
+      <DependentUpon>sbt_yx_custreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custreport.aspx.designer.cs">
+      <DependentUpon>sbt_yx_custreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custdetail_yd.aspx.cs">
+      <DependentUpon>sbt_yx_custdetail_yd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custdetail_yd.aspx.designer.cs">
+      <DependentUpon>sbt_yx_custdetail_yd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custlist_yd.aspx.cs">
+      <DependentUpon>sbt_yx_custlist_yd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_yx_custlist_yd.aspx.designer.cs">
+      <DependentUpon>sbt_yx_custlist_yd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost_detail.aspx.cs">
+      <DependentUpon>sbt_custdingtalk_cost_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_cost_detail.aspx.designer.cs">
+      <DependentUpon>sbt_custdingtalk_cost_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_salecost_target.aspx.cs">
+      <DependentUpon>sbt_custdingtalk_salecost_target.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\sbtproject\sbt_custdingtalk_salecost_target.aspx.designer.cs">
+      <DependentUpon>sbt_custdingtalk_salecost_target.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\Technician\sbt_daytechnician.aspx.cs">
+      <DependentUpon>sbt_daytechnician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\Technician\sbt_daytechnician.aspx.designer.cs">
+      <DependentUpon>sbt_daytechnician.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\Technician\sbt_daytechnicianbase.aspx.cs">
+      <DependentUpon>sbt_daytechnicianbase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5\SBTDING\Technician\sbt_daytechnicianbase.aspx.designer.cs">
+      <DependentUpon>sbt_daytechnicianbase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5\SBTDING\YLBG\CompressByte.cs" />
+    <Compile Include="Handler\CHHandler.ashx.cs">
+      <DependentUpon>CHHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\JtzbHandler.ashx.cs">
+      <DependentUpon>JtzbHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\sbtht.ashx.cs">
+      <DependentUpon>sbtht.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\YLHandler.ashx.cs">
+      <DependentUpon>YLHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menuCentre.aspx.cs">
+      <DependentUpon>menuCentre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menuCentre.aspx.designer.cs">
+      <DependentUpon>menuCentre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="unitClass\DbHelperOra.cs" />
+    <Compile Include="unitClass\DESUtil.cs" />
+    <Compile Include="unitClass\MD5Util.cs" />
+    <Compile Include="WeiChart\WeiChartHandler.ashx.cs">
+      <DependentUpon>WeiChartHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="yf\Farmprofit.aspx.cs">
+      <DependentUpon>Farmprofit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yf\Farmprofit.aspx.designer.cs">
+      <DependentUpon>Farmprofit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yf\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yf\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yf\SL\SLCost.aspx.cs">
+      <DependentUpon>SLCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yf\SL\SLCost.aspx.designer.cs">
+      <DependentUpon>SLCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ylzjkcgl\dqylkc.aspx.cs">
+      <DependentUpon>dqylkc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ylzjkcgl\dqylkc.aspx.designer.cs">
+      <DependentUpon>dqylkc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ylzjkcgl\lsylkc.aspx.cs">
+      <DependentUpon>lsylkc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ylzjkcgl\lsylkc.aspx.designer.cs">
+      <DependentUpon>lsylkc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ylzjkcgl\ylkcForm.aspx.cs">
+      <DependentUpon>ylkcForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ylzjkcgl\ylkcForm.aspx.designer.cs">
+      <DependentUpon>ylkcForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\dmnrrjg.aspx.cs">
+      <DependentUpon>dmnrrjg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\dmnrrjg.aspx.designer.cs">
+      <DependentUpon>dmnrrjg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\FeedContrast\FeedContrast.aspx.cs">
+      <DependentUpon>FeedContrast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\FeedContrast\FeedContrast.aspx.designer.cs">
+      <DependentUpon>FeedContrast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\hreffeiyong.aspx.cs">
+      <DependentUpon>hreffeiyong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\hreffeiyong.aspx.designer.cs">
+      <DependentUpon>hreffeiyong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\PigCost\PigCost.aspx.cs">
+      <DependentUpon>PigCost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\PigCost\PigCost.aspx.designer.cs">
+      <DependentUpon>PigCost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\saleTarget.aspx.cs">
+      <DependentUpon>saleTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\saleTarget.aspx.designer.cs">
+      <DependentUpon>saleTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\sbt_QualityComplaints.aspx.cs">
+      <DependentUpon>sbt_QualityComplaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\sbt_QualityComplaints.aspx.designer.cs">
+      <DependentUpon>sbt_QualityComplaints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\SBTMap.aspx.cs">
+      <DependentUpon>SBTMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\SBTMap.aspx.designer.cs">
+      <DependentUpon>SBTMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\sbt_salary.aspx.cs">
+      <DependentUpon>sbt_salary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\sbt_salary.aspx.designer.cs">
+      <DependentUpon>sbt_salary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool1.aspx.cs">
+      <DependentUpon>tool1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool1.aspx.designer.cs">
+      <DependentUpon>tool1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool2.aspx.cs">
+      <DependentUpon>tool2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool2.aspx.designer.cs">
+      <DependentUpon>tool2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool3.aspx.cs">
+      <DependentUpon>tool3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool3.aspx.designer.cs">
+      <DependentUpon>tool3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool4.aspx.cs">
+      <DependentUpon>tool4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool4.aspx.designer.cs">
+      <DependentUpon>tool4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool_SZ.aspx.cs">
+      <DependentUpon>tool_SZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool_SZ.aspx.designer.cs">
+      <DependentUpon>tool_SZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\UploadFiles.cs" />
+    <Compile Include="yx\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="yx\WebServiceMethod.cs" />
+    <Compile Include="yx\weixin\ActiveList.aspx.cs">
+      <DependentUpon>ActiveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\weixin\ActiveList.aspx.designer.cs">
+      <DependentUpon>ActiveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\weixin\SalePlanList.aspx.cs">
+      <DependentUpon>SalePlanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\weixin\SalePlanList.aspx.designer.cs">
+      <DependentUpon>SalePlanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\weixin\SalesPlan.aspx.cs">
+      <DependentUpon>SalesPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\weixin\SalesPlan.aspx.designer.cs">
+      <DependentUpon>SalesPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yx\tool_SBT_SZ.aspx.cs">
+      <DependentUpon>tool_SBT_SZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yx\tool_SBT_SZ.aspx.designer.cs">
+      <DependentUpon>tool_SBT_SZ.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Fakes\agsXMPP.fakes" />
+    <Fakes Include="Fakes\DBUtility.fakes" />
+    <Content Include="Service References\ServiceReference1\API.wsdl" />
+    <Content Include="Service References\ServiceReference1\WebApp.ServiceReference1.ReturnInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference2\userinterface.wsdl" />
+    <Content Include="Service References\ServiceReference2\WebApp.ServiceReference2.ReturnValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference3\API.wsdl" />
+    <Content Include="Service References\ServiceReference3\WebApp.ServiceReference3.ReturnInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="WeiChart\WeiChartHandler.ashx" />
+    <Content Include="DINGTALKSERVER\tuling.ashx" />
+    <Content Include="H5\SBTDING\fonts\mui-icons-extra.ttf" />
+    <Content Include="H5\SBTDING\fonts\mui.ttf" />
+    <Content Include="H5\SBTDING\manifest.json" />
+    <Content Include="Handler\JtzbHandler.ashx" />
+    <Content Include="Handler\sbtht.ashx" />
+    <Content Include="Handler\CHHandler.ashx" />
+    <Content Include="Handler\YLHandler.ashx" />
+    <None Include="Properties\PublishProfiles\jisuan.pubxml" />
+    <None Include="yx\images\zoom\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="upload\image\" />
+    <Folder Include="yx\PigPK\" />
+    <Folder Include="yx\Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference3\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50022</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

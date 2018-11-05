@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="initial-scale=1.0,maximum-scale=2,minimum-scale=1,width=device-width" name="viewport" />
+    <title></title>
+    <style type="text/css">
+        table {
+            width: 98%;
+            text-align: left;
+            border: 1px solid #757575;
+        }
+
+
+        td {
+            width: 50%;
+            border: 1px solid #757575;
+            height: 30px;
+        }
+
+        input {
+            width: 90%;
+        }
+
+
+        .radiotable td {
+            text-align: center;
+            border: 0px;
+            width: 60px;
+        }
+
+ 
+    </style>
+    <script language="JavaScript" type="text/javascript">
+
+
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F52d8ec9e1c397292d12c02fea902cf56' type='text/javascript'%3E%3C/script%3E"));
+        /*********************************************
+        功能: 通用DIV切换函数
+        参数: divID --当前DIV的ID号；divName --要改变的这一组DIV的命名前缀；zDivCount --这一组DIV的个数-1
+        
+        *********************************************/
+        function ChangeDiv(divId, divName, zDivCount) {
+            for (i = 1; i <= zDivCount; i++) {
+
+                document.getElementById(divName + i).style.display = "none";
+
+            }
+            document.getElementById(divName + divId).style.display = "block";
+        }
+        function JiSuanValue(LabId) {
+
+            if (LabId == 'KD') {
+
+                if (GetRadioValue("RadButLis12") == "开原") {
+                    document.getElementById("hgfy").innerHTML = "50";
+                    document.getElementById("dsfy").innerHTML = "3"
+                    document.getElementById("clxs").innerHTML = (1 - (parseFloat(document.getElementById("clsf").value) / 100 - parseFloat(document.getElementById("hgsf").value) / 100) * parseFloat(document.getElementById("hgxs").value)).toFixed(4);
+                    document.getElementById("zgcb").innerHTML = (parseFloat(document.getElementById("clsgj").value) / parseFloat(document.getElementById("clxs").innerHTML)).toFixed(2);
+                    document.getElementById("dgcb").value =(parseFloat(document.getElementById("zgcb").innerHTML) + parseFloat(document.getElementById("hgfy").innerHTML) + parseFloat(document.getElementById("dsfy").innerHTML) + parseFloat(document.getElementById("qtfy").value) + parseFloat(document.getElementById("jgyf").value)).toFixed(2);
+                    document.getElementById("dglr").innerHTML = (document.getElementById("gksgj").value - document.getElementById("dgcb").value).toFixed(2);
+                }
+                if (GetRadioValue("RadButLis12") == "肇源") {
+                    document.getElementById("hgfy").innerHTML = "60";
+                    document.getElementById("dsfy").innerHTML = "25"
+                    document.getElementById("clxs").innerHTML = (1 - (parseFloat(document.getElementById("clsf").value) / 100 - parseFloat(document.getElementById("hgsf").value) / 100) * parseFloat(document.getElementById("hgxs").value)).toFixed(4);
+                    document.getElementById("zgcb").innerHTML = (parseFloat(document.getElementById("clsgj").value) / parseFloat(document.getElementById("clxs").innerHTML)).toFixed(2);
+                    document.getElementById("dgcb").value = (parseFloat(document.getElementById("zgcb").innerHTML) + parseFloat(document.getElementById("hgfy").innerHTML) + parseFloat(document.getElementById("dsfy").innerHTML)+ parseFloat(document.getElementById("qtfy").value) + parseFloat(document.getElementById("jgyf").value)).toFixed(2);
+                    document.getElementById("dglr").innerHTML = (document.getElementById("gksgj").value - document.getElementById("dgcb").value).toFixed(2);
+
+                }
+
+            }
+        }
+
+        function GetRadioValue(RadioName) {
+            var obj;
+            obj = document.getElementsByName(RadioName);
+            if (obj != null) {
+                var i;
+                for (i = 0; i < obj.length; i++) {
+                    if (obj[i].checked)
+                        return obj[i].value;
+                }
+            }
+            return null;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+   
+             
+        
+         <div id="Numb13" style="display:block; text-align: center">
+            <table style="text-align: center; border: 1px solid Red;" align="center">
+                <tr>
+                    <td colspan="2" style="color: blue; font-size: 30px; text-align: center">潮粮到港成本测算</td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <div style="text-align: center">
+                            <table id="Table4" class="radiotable" style="width: 100%;">
+                           
+         <tr><a style="text-align:left;color:blue">潮粮库点:</a></tr>
+                                <tr>
+                                         
+                                    <td>
+                                        <label for="RadButLis12_0">开原</label><input id="Radio6" type="radio" name="RadButLis12" value="开原" checked="checked" onclick="JiSuanValue('KD')" /></td>
+                                    <td>
+                                        <label for="RadButLis12_1">肇源</label><input id="Radio7" type="radio" name="RadButLis12" value="肇源" onclick="JiSuanValue('KD')" /></td>
+                                       
+                                </tr>
+                            </table>
+                             <table id="Table1" class="radiotable" style="width: 100%;">
+                               <tr style="text-align:left"><a style="text-align:left;color:blue">港口:</a></tr>
+                                <tr>
+                        
+                                    <td>
+                                        <label for="RadButLis12_0">鲅鱼圈</label><input id="Radio1" type="radio" name="RadButLis13" value="鲅鱼圈" checked="checked" onclick="JiSuanValue('KD')" /></td>
+                                    <td>
+                                        <label for="RadButLis12_1">锦州港</label><input id="Radio2" type="radio" name="RadButLis13" value="锦州港" onclick="JiSuanValue('KD')" /></td>
+                                       
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>港口收购价</td>
+                    <td>
+                        <input id="gksgj" type="text" onblur="JiSuanValue('KD')" /></td>
+
+                </tr>
+                <tr>
+                    <td>潮粮收购价</td>
+                    <td>
+                        <input id="clsgj" type="text" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+                <tr>
+
+                    <td>潮粮水份(%)</td>
+                    <td>
+                        <input id="clsf" type="text" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+                 <tr>
+
+                    <td>烘干系数</td>
+                    <td>
+                        <input id="hgxs" type="text"  value="1.25" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+                 <tr>
+
+                <td>烘干水份(%)</td>
+                    <td>
+                        <input id="hgsf" type="text" value="14.5" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+                    <tr>
+                    <td>集港运费</td>
+                    <td>
+                        <input id="jgyf" type="text" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+ <tr>
+                    <td>其他费用</td>
+                    <td>
+                        <input id="qtfy" type="text" value="0" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+                    <tr>
+                    <td>到港成本</td>
+                    <td>
+                        <input id="dgcb" type="text" onblur="JiSuanValue('KD')" /></td>
+                </tr>
+               
+                <tr>
+                    <td style="color: blue"><strong>到港利润</strong></td>
+                    <td>
+                        <asp:Label ID="dglr" runat="server" Text=""></asp:Label></td>
+                </tr>
+                <tr>
+      
+                    <td  colspan="2" style="text-align:left">
+                        <strong>
+                        1、烘干费用:<a style="color:red"><asp:Label ID="hgfy" runat="server" Text=""></asp:Label></a><br/>
+                        2、代收费用:<a style="color:red"><asp:Label ID="dsfy" runat="server" Text=""></asp:Label></a><br/>  
+                        3、出粮系数:<a style="color:red"><asp:Label ID="clxs" runat="server" Text=""></asp:Label></a><br/>
+                        4、折干成本:<a style="color:red"><asp:Label ID="zgcb" runat="server" Text=""></asp:Label></a><br/>
+                        </strong>
+                    </td>
+                </tr>
+
+            </table>
+          
+        </div>
+        <div id="Div1" style="display: block; text-align: center">
+            <table style="text-align: center; border: 0px;" align="center">
+                <tr>
+                    <td colspan="2" style="border: 0px"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="border: 0px"></td>
+                </tr>
+                  <tr>
+                    <td colspan="2" style="border: 0px"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

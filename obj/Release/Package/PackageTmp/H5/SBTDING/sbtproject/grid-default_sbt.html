@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>sbtjt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+</head>
+
+<body>
+    <form method="post"  id="form1">
+        	<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">双胞胎集团</h1>
+		</header>
+        <div class="mui-content">
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+               
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="href1" href="sbt_yx_custlist_yd.aspx">
+                        <span class="mui-icon mui-icon-navigate"></span>
+                        <div class="mui-media-body">异动客户</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="href2" href="sbt_yx_custlist.aspx">
+                        <span class="mui-icon mui-icon-compose"></span>
+                        <div class="mui-media-body">流失客户</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="A1" href="sbt_custdingtalk_cost.aspx">
+                        <span class="mui-icon mui-icon-chatboxes"></span>
+                        <div class="mui-media-body">客户毛利</div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+                    <a id="A2" href="sbt_custdingtalk_salecost.html">
+                        <span class="mui-icon mui-icon-map"></span>
+                        <div class="mui-media-body">客户目标</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </form>
+</body>
+<script src="../js/mui.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+
+
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    // 调用方法
+    //document.getElementById("href1").href = "sbt_yx_custlist_yd.aspx?url=" + GetQueryString("url");
+    //	document.getElementById("href2").href = "sbt_yx_custlist.aspx?url=" + GetQueryString("url");
+    localStorage.setItem("sbtuserid", GetQueryString("userid"))
+    //alert("离线数据是：" + localStorage.getItem("sbtuserid"));
+
+</script>
+</html>

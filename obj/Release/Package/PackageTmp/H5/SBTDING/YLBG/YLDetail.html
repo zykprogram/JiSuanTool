@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <link href="../css/mui.picker.css" rel="stylesheet" />
+    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-center"></a>
+        <h1 class="mui-title"></h1>
+    </header>
+
+    <div class="mui-content">
+        <div class="mui-content-padded">
+        </div>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">客户：</h5>
+        <form class="mui-input-group" runat="server">
+            <select id="custid"></select>
+        </form>
+        <h5 class="mui-content-padded">单据类型：</h5>
+        <select id="type">
+            <option value="">--请选择类型--</option>
+            <option value="1">期初</option>
+            <option value="2">卖鱼</option>
+            <option value="3">抓鱼</option>
+        </select>
+        <h5 class="mui-content-padded">时间：</h5>
+        <button id='datechoose' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+        <h5 class="mui-content-padded">草鱼1:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy1_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy1_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy1_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">草鱼2:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy2_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy2_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy2_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">草鱼3:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy3_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy3_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cy3_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">花鲢:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hl_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hl_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hl_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">白鲢:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="bl_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="bl_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="bl_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">鲫/鲤鱼:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="li_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="li_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="li_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">鳊鱼:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="by_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="by_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="by_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">鲮鱼:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="ly_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="ly_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="ly_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">罗非鱼:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="lfy_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="lfy_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="lfy_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">鮰鱼:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hy_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hy_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="hy_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="ZYInfo" hidden class="mui-content-padded">
+        <h5 class="mui-content-padded">抓鱼费用（元）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>规格（斤/尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="zy_standard" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>重量（斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="zy_weight" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>单价（元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="zy_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <form class="mui-input-group">
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary" onclick="clickok()">确认</button>&nbsp;&nbsp;
+                <button type="button" class="mui-btn mui-btn-danger" onclick="javascript:window.history.go(-1);">取消</button>
+            </div>
+        </form>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script>
+        function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate = year + seperator1 + month + seperator1 + strDate;
+            return currentdate;
+        }
+        datechoose.innerText = getNowFormatDate();
+        (function ($) {
+            $.init();
+            var result = $('#result')[0];
+            var btns = $('.btn');
+            btns.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    var id = this.getAttribute('id');
+                    /*
+                     * 首次显示时实例化组件
+                     * 示例为了简洁，将 options 放在了按钮的 dom 上
+                     * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                     */
+                    var picker = new $.DtPicker(options);
+                    picker.show(function (rs) {
+                        /*
+                         * rs.value 拼合后的 value
+                         * rs.text 拼合后的 text
+                         * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                         * rs.m 月，用法同年
+                         * rs.d 日，用法同年
+                         * rs.h 时，用法同年
+                         * rs.i 分（minutes 的第二个字母），用法同年
+                         */
+                        if (!(document.getElementById("datechoose").innerText == rs.text) && document.getElementById("type") != "") {
+                            debugger;
+                            GetDetailInfo(document.getElementById("type").value, document.getElementById("custid").value, rs.text);
+                        }
+                        datechoose.innerText = rs.text;
+                        /*
+                         * 返回 false 可以阻止选择框的关闭
+                         * return false;
+                         */
+                        /*
+                         * 释放组件资源，释放后将将不能再操作组件
+                         * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                         * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                         * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                         */
+                        picker.dispose();
+                    });
+                }, false);
+            });
+        })(mui);
+    </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            //获取客户信息
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetCustInfo",
+                type: "post",
+                //data: { id: id },
+                dataType: "json",
+                success: function (data) {
+                    debugger;
+                    var new_Html = "";
+                    for (var i = 0; i < data.length; i++) {
+                        new_Html += "<option value='" + data[i].ID + "'>" + data[i].NAME + "</option>";
+                    }
+                    $("#custid").html(new_Html);
+                }
+            });
+
+            //根据不同的类型和客户获取历史数据
+            $("#type,#custid").change(function () {
+                debugger;
+                switch ($("#type").val()) {
+                    case "1":
+                        $("#ZYInfo").hide();
+                        GetDetailInfo($("#type").val(), $("#custid").val(), document.getElementById("datechoose").innerText);
+                        break;
+                    case "2":
+                        $("#ZYInfo").show();
+                        GetDetailInfo($("#type").val(), $("#custid").val(), document.getElementById("datechoose").innerText);
+                        break;
+                    case "3":
+                        $("#ZYInfo").hide();
+                        GetDetailInfo($("#type").val(), $("#custid").val(), document.getElementById("datechoose").innerText);
+                        break;
+                }
+            });
+        });
+
+        //获取历史数据
+        function GetDetailInfo(type, custid, time) {
+            //获取基础数据
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetDetailInfo",
+                type: "post",
+                data: { type: type, custid: custid, time: time },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length != 0) {
+                        document.getElementById("cy1_standard").value = data[0].CY1_STANDARD;
+                        document.getElementById("cy1_weight").value = data[0].CY1_WEIGHT;
+                        document.getElementById("cy1_price").value = data[0].CY1_PRICE;
+                        document.getElementById("cy2_standard").value = data[0].CY2_STANDARD;
+                        document.getElementById("cy2_weight").value = data[0].CY2_WEIGHT;
+                        document.getElementById("cy2_price").value = data[0].CY2_PRICE;
+                        document.getElementById("cy3_standard").value = data[0].CY3_STANDARD;
+                        document.getElementById("cy3_weight").value = data[0].CY3_WEIGHT;
+                        document.getElementById("cy3_price").value = data[0].CY3_PRICE;
+                        document.getElementById("hl_standard").value = data[0].HL_STANDARD;
+                        document.getElementById("hl_weight").value = data[0].HL_WEIGHT;
+                        document.getElementById("hl_price").value = data[0].HL_PRICE;
+                        document.getElementById("bl_standard").value = data[0].BL_STANDARD;
+                        document.getElementById("bl_weight").value = data[0].BL_WEIGHT;
+                        document.getElementById("bl_price").value = data[0].BL_PRICE;
+                        document.getElementById("li_standard").value = data[0].LI_STANDARD;
+                        document.getElementById("li_weight").value = data[0].LI_WEIGHT;
+                        document.getElementById("li_price").value = data[0].LI_PRICE;
+                        document.getElementById("by_standard").value = data[0].BY_STANDARD;
+                        document.getElementById("by_weight").value = data[0].BY_WEIGHT;
+                        document.getElementById("by_price").value = data[0].BY_PRICE;
+                        document.getElementById("ly_standard").value = data[0].LY_STANDARD;
+                        document.getElementById("ly_weight").value = data[0].LY_WEIGHT;
+                        document.getElementById("ly_price").value = data[0].LY_PRICE;
+                        document.getElementById("lfy_standard").value = data[0].LFY_STANDARD;
+                        document.getElementById("lfy_weight").value = data[0].LFY_WEIGHT;
+                        document.getElementById("lfy_price").value = data[0].LFY_PRICE;
+                        document.getElementById("hy_standard").value = data[0].HY_STANDARD;
+                        document.getElementById("hy_weight").value = data[0].HY_WEIGHT;
+                        document.getElementById("hy_price").value = data[0].HY_PRICE;
+                        document.getElementById("zy_standard").value = data[0].ZY_STANDARD;
+                        document.getElementById("zy_weight").value = data[0].ZY_WEIGHT;
+                        document.getElementById("zy_price").value = data[0].ZY_PRICE;
+                    } else {
+                        document.getElementById("cy1_standard").value = 0;
+                        document.getElementById("cy1_weight").value = 0;
+                        document.getElementById("cy1_price").value = 0;
+                        document.getElementById("cy2_standard").value = 0;
+                        document.getElementById("cy2_weight").value = 0;
+                        document.getElementById("cy2_price").value = 0;
+                        document.getElementById("cy3_standard").value = 0;
+                        document.getElementById("cy3_weight").value = 0;
+                        document.getElementById("cy3_price").value = 0;
+                        document.getElementById("hl_standard").value = 0;
+                        document.getElementById("hl_weight").value = 0;
+                        document.getElementById("hl_price").value = 0;
+                        document.getElementById("bl_standard").value = 0;
+                        document.getElementById("bl_weight").value = 0;
+                        document.getElementById("bl_price").value = 0;
+                        document.getElementById("li_standard").value = 0;
+                        document.getElementById("li_weight").value = 0;
+                        document.getElementById("li_price").value = 0;
+                        document.getElementById("by_standard").value = 0;
+                        document.getElementById("by_weight").value = 0;
+                        document.getElementById("by_price").value = 0;
+                        document.getElementById("ly_standard").value = 0;
+                        document.getElementById("ly_weight").value = 0;
+                        document.getElementById("ly_price").value = 0;
+                        document.getElementById("lfy_standard").value = 0;
+                        document.getElementById("lfy_weight").value = 0;
+                        document.getElementById("lfy_price").value = 0;
+                        document.getElementById("hy_standard").value = 0;
+                        document.getElementById("hy_weight").value = 0;
+                        document.getElementById("hy_price").value = 0;
+                        document.getElementById("zy_standard").value = 0;
+                        document.getElementById("zy_weight").value = 0;
+                        document.getElementById("zy_price").value = 0;
+                    }
+                }
+            });
+        }
+
+        //提交按钮
+        function clickok() {
+            var custid = document.getElementById("custid").value;
+            var type = document.getElementById("type").value;
+            var cy1_standard = document.getElementById("cy1_standard").value;
+            var cy1_weight = document.getElementById("cy1_weight").value;
+            var cy1_price = document.getElementById("cy1_price").value;
+            var cy2_standard = document.getElementById("cy2_standard").value;
+            var cy2_weight = document.getElementById("cy2_weight").value;
+            var cy2_price = document.getElementById("cy2_price").value;
+            var cy3_standard = document.getElementById("cy3_standard").value;
+            var cy3_weight = document.getElementById("cy3_weight").value;
+            var cy3_price = document.getElementById("cy3_price").value;
+            var hl_standard = document.getElementById("hl_standard").value;
+            var hl_weight = document.getElementById("hl_weight").value;
+            var hl_price = document.getElementById("hl_price").value;
+            var bl_standard = document.getElementById("bl_standard").value;
+            var bl_weight = document.getElementById("bl_weight").value;
+            var bl_price = document.getElementById("bl_price").value;
+            var li_standard = document.getElementById("li_standard").value;
+            var li_weight = document.getElementById("li_weight").value;
+            var li_price = document.getElementById("li_price").value;
+            var by_standard = document.getElementById("by_standard").value;
+            var by_weight = document.getElementById("by_weight").value;
+            var by_price = document.getElementById("by_price").value;
+            var ly_standard = document.getElementById("ly_standard").value;
+            var ly_weight = document.getElementById("ly_weight").value;
+            var ly_price = document.getElementById("ly_price").value;
+            var lfy_standard = document.getElementById("lfy_standard").value;
+            var lfy_weight = document.getElementById("lfy_weight").value;
+            var lfy_price = document.getElementById("lfy_price").value;
+            var hy_standard = document.getElementById("hy_standard").value;
+            var hy_weight = document.getElementById("hy_weight").value;
+            var hy_price = document.getElementById("hy_price").value;
+            var zy_standard = document.getElementById("zy_standard").value;
+            var zy_weight = document.getElementById("zy_weight").value;
+            var zy_price = document.getElementById("zy_price").value;
+            var userid = getQueryString("userid");
+            var time = document.getElementById("datechoose").innerText;
+            if (custid != "") {
+                $.ajax({
+                    url: "../../../Handler/YLHandler.ashx?method=SubmitDetailInfo",
+                    type: "post",
+                    data: {
+                        custid: custid,
+                        type: type,
+                        cy1_standard: cy1_standard,
+                        cy1_weight: cy1_weight,
+                        cy1_price: cy1_price,
+                        cy2_standard: cy2_standard,
+                        cy2_weight: cy2_weight,
+                        cy2_price: cy2_price,
+                        cy3_standard: cy3_standard,
+                        cy3_weight: cy3_weight,
+                        cy3_price: cy3_price,
+                        hl_standard: hl_standard,
+                        hl_weight: hl_weight,
+                        hl_price: hl_price,
+                        time: time,
+                        bl_standard: bl_standard,
+                        bl_weight: bl_weight,
+                        bl_price: bl_price,
+                        li_standard: li_standard,
+                        li_weight: li_weight,
+                        li_price: li_price,
+                        by_standard: by_standard,
+                        by_weight: by_weight,
+                        by_price: by_price,
+                        ly_standard: ly_standard,
+                        ly_weight: ly_weight,
+                        ly_price: ly_price,
+                        lfy_standard: lfy_standard,
+                        lfy_weight: lfy_weight,
+                        lfy_price: lfy_price,
+                        hy_standard: hy_standard,
+                        hy_weight: hy_weight,
+                        hy_price: hy_price,
+                        zy_standard: zy_standard,
+                        zy_weight: zy_weight,
+                        zy_price: zy_price,
+                        userid: userid
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        alert(data.result);
+                    },
+                    error: function() {
+                        alert("提交失败！");
+                    }
+                });
+            }
+        }
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DBUtility.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:DBUtility.Fakes.ShimCommandInfo">
+            <summary>DBUtility.CommandInfo 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimCommandInfo.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimCommandInfo.#ctor(DBUtility.CommandInfo)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimCommandInfo.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.AllInstances.OnSolicitationEvent">
+            <summary>设置 CommandInfo.OnSolicitationEvent() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.AllInstances.SolicitationEventAddEventHandler">
+            <summary>设置 CommandInfo.add_SolicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.AllInstances.SolicitationEventRemoveEventHandler">
+            <summary>设置 CommandInfo.remove_SolicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.AllInstances._solicitationEventAddEventHandler">
+            <summary>设置 CommandInfo.add__solicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.AllInstances._solicitationEventRemoveEventHandler">
+            <summary>设置 CommandInfo.remove__solicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimCommandInfo.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimCommandInfo.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.Constructor">
+            <summary>设置 CommandInfo.CommandInfo() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.ConstructorStringSqlParameterArray">
+            <summary>设置 CommandInfo.CommandInfo(String sqlText, SqlParameter[] para) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.ConstructorStringSqlParameterArrayEffentNextType">
+            <summary>设置 CommandInfo.CommandInfo(String sqlText, SqlParameter[] para, EffentNextType type) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.OnSolicitationEvent">
+            <summary>设置 CommandInfo.OnSolicitationEvent() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.SolicitationEventAddEventHandler">
+            <summary>设置 CommandInfo.add_SolicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo.SolicitationEventRemoveEventHandler">
+            <summary>设置 CommandInfo.remove_SolicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo._solicitationEventAddEventHandler">
+            <summary>设置 CommandInfo.add__solicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimCommandInfo._solicitationEventRemoveEventHandler">
+            <summary>设置 CommandInfo.remove__solicitationEvent(EventHandler value) 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDESEncrypt">
+            <summary>DBUtility.DESEncrypt 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDESEncrypt.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDESEncrypt.#ctor(DBUtility.DESEncrypt)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDESEncrypt.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDESEncrypt.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDESEncrypt.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.Constructor">
+            <summary>设置 DESEncrypt.DESEncrypt() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.DecryptString">
+            <summary>设置 DESEncrypt.Decrypt(String Text) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.DecryptStringString">
+            <summary>设置 DESEncrypt.Decrypt(String Text, String sKey) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.EncryptString">
+            <summary>设置 DESEncrypt.Encrypt(String Text) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDESEncrypt.EncryptStringString">
+            <summary>设置 DESEncrypt.Encrypt(String Text, String sKey) 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelper">
+            <summary>DBUtility.DbHelper 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelper.#ctor(DBUtility.DbHelper)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelper.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelper.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelper.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.CloseConn">
+            <summary>设置 DbHelper.CloseConn() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.Constructor">
+            <summary>设置 DbHelper.DbHelper() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteNonQueryCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteNonQuery(CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteNonQueryDbConnectionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteNonQuery(DbConnection connection, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteNonQueryDbTransactionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteNonQuery(DbTransaction trans, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteNonQueryStringCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteNonQuery(String connectionString, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecutePageDbConnectionStringStringStringStringInt32Int32Int32OutInt32OutDbParameterArray">
+            <summary>设置 DbHelper.ExecutePage(DbConnection connection, String SqlAllFields, String SqlTablesAndWhere, String IndexField, String OrderFields, Int32 PageIndex, Int32 PageSize, Int32&amp; RecordCount, Int32&amp; PageCount, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecutePageStringStringStringStringStringInt32Int32Int32OutInt32OutDbParameterArray">
+            <summary>设置 DbHelper.ExecutePage(String connectionString, String SqlAllFields, String SqlTablesAndWhere, String IndexField, String OrderFields, Int32 PageIndex, Int32 PageSize, Int32&amp; RecordCount, Int32&amp; PageCount, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteReaderCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteReader(CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteReaderDbConnectionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteReader(DbConnection connection, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteReaderPageStringStringStringStringStringStringInt32Int32Int32OutInt32OutDbParameterArray">
+            <summary>设置 DbHelper.ExecuteReaderPage(String connectionString, String SqlAllFields, String SqlTablesAndWhere, String IndexField, String GroupClause, String OrderFields, Int32 PageIndex, Int32 PageSize, Int32&amp; RecordCount, Int32&amp; PageCount, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteReaderStringCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteReader(String connectionString, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteReaderStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteReader(String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteScalarCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteScalar(CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteScalarDbConnectionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteScalar(DbConnection connection, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteScalarDbTransactionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteScalar(DbTransaction trans, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteScalarStringCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteScalar(String connectionString, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteTableCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteTable(CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteTableDbConnectionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteTable(DbConnection connection, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExecuteTableStringCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.ExecuteTable(String connectionString, CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.ExistsCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.Exists(CommandType cmdType, String cmdText, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetListStringStringStringStringInt32Int32Int32OutInt32OutDbParameterArray">
+            <summary>设置 DbHelper.GetList(String AllFields, String Condition, String IndexField, String OrderFields, Int32 PageIndex, Int32 PageSize, Int32&amp; RecordCount, Int32&amp; PageCount, DbParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetPageListStringStringStringStringInt32Int32Int32OutInt32Out">
+            <summary>设置 DbHelper.GetPageList(String SqlTable, String SqlAllFields, String OrderFields, String SqlWhere, Int32 PageSize, Int32 PageIndex, Int32&amp; PageCount, Int32&amp; RecordCount) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetPageSqlConnectionStringStringStringStringInt32Int32Int32OutInt32Out">
+            <summary>设置 DbHelper.GetPage(SqlConnection connection, String SqlTables, String SqlAllFields, String OrderFields, String SqlWhere, Int32 PageSize, Int32 PageIndex, Int32&amp; PageCount, Int32&amp; RecordCount) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetPageSqlDbConnectionDbCommandStringStringStringStringInt32Int32Int32OutInt32Out">
+            <summary>设置 DbHelper.GetPageSql(DbConnection connection, DbCommand cmd, String SqlAllFields, String SqlTablesAndWhere, String IndexField, String OrderFields, Int32 PageIndex, Int32 PageSize, Int32&amp; RecordCount, Int32&amp; PageCount) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetPageStringStringStringStringInt32Int32Int32OutInt32Out">
+            <summary>设置 DbHelper.GetPage(String SqlTables, String SqlAllFields, String OrderFields, String SqlWhere, Int32 PageSize, Int32 PageIndex, Int32&amp; PageCount, Int32&amp; RecordCount) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.GetPageStringStringStringStringStringInt32Int32Int32OutInt32Out">
+            <summary>设置 DbHelper.GetPage(String connectionString, String SqlTables, String SqlAllFields, String OrderFields, String SqlWhere, Int32 PageSize, Int32 PageIndex, Int32&amp; PageCount, Int32&amp; RecordCount) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.PrepareCommandDbCommandDbConnectionDbTransactionCommandTypeStringDbParameterArray">
+            <summary>设置 DbHelper.PrepareCommand(DbCommand cmd, DbConnection conn, DbTransaction trans, CommandType cmdType, String cmdText, DbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.SetTimeoutDefault">
+            <summary>设置 DbHelper.SetTimeoutDefault() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelper.StaticConstructor">
+            <summary>设置 DbHelper.DbHelper() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperNC">
+            <summary>DBUtility.DbHelperNC 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperNC.#ctor(DBUtility.DbHelperNC)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperNC.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperNC.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperNC.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.BuildIntCommandOracleConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperNC.BuildIntCommand(OracleConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.BuildQueryCommandOracleConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperNC.BuildQueryCommand(OracleConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.Constructor">
+            <summary>设置 DbHelperNC.DbHelperNC() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteReaderString">
+            <summary>设置 DbHelperNC.ExecuteReader(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteReaderStringOracleParameterArray">
+            <summary>设置 DbHelperNC.ExecuteReader(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlInsertImgStringByteArray">
+            <summary>设置 DbHelperNC.ExecuteSqlInsertImg(String strSQL, Byte[] fs) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlString">
+            <summary>设置 DbHelperNC.ExecuteSql(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlStringOracleParameterArray">
+            <summary>设置 DbHelperNC.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlStringString">
+            <summary>设置 DbHelperNC.ExecuteSql(String SQLString, String content) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlTranArrayList">
+            <summary>设置 DbHelperNC.ExecuteSqlTran(ArrayList SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExecuteSqlTranHashtable">
+            <summary>设置 DbHelperNC.ExecuteSqlTran(Hashtable SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExistsString">
+            <summary>设置 DbHelperNC.Exists(String strSql) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.ExistsStringOracleParameterArray">
+            <summary>设置 DbHelperNC.Exists(String strSql, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.GetMaxIDStringString">
+            <summary>设置 DbHelperNC.GetMaxID(String FieldName, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.GetSingleString">
+            <summary>设置 DbHelperNC.GetSingle(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.GetSingleStringOracleParameterArray">
+            <summary>设置 DbHelperNC.GetSingle(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.PrepareCommandOracleCommandOracleConnectionOracleTransactionStringOracleParameterArray">
+            <summary>设置 DbHelperNC.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.QueryString">
+            <summary>设置 DbHelperNC.Query(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.QueryStringOracleParameterArray">
+            <summary>设置 DbHelperNC.Query(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.RunProcedureStringIDataParameterArray">
+            <summary>设置 DbHelperNC.RunProcedure(String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.RunProcedureStringIDataParameterArrayInt32Out">
+            <summary>设置 DbHelperNC.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32&amp; rowsAffected) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.RunProcedureStringIDataParameterArrayString">
+            <summary>设置 DbHelperNC.RunProcedure(String storedProcName, IDataParameter[] parameters, String tableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperNC.StaticConstructor">
+            <summary>设置 DbHelperNC.DbHelperNC() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperOleDb">
+            <summary>DBUtility.DbHelperOleDb 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOleDb.#ctor(DBUtility.DbHelperOleDb)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperOleDb.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOleDb.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOleDb.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.Constructor">
+            <summary>设置 DbHelperOleDb.DbHelperOleDb() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteReaderString">
+            <summary>设置 DbHelperOleDb.ExecuteReader(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteReaderStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.ExecuteReader(String SQLString, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlInsertImgStringByteArray">
+            <summary>设置 DbHelperOleDb.ExecuteSqlInsertImg(String strSQL, Byte[] fs) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlString">
+            <summary>设置 DbHelperOleDb.ExecuteSql(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.ExecuteSql(String SQLString, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlStringString">
+            <summary>设置 DbHelperOleDb.ExecuteSql(String SQLString, String content) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlTranArrayList">
+            <summary>设置 DbHelperOleDb.ExecuteSqlTran(ArrayList SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExecuteSqlTranHashtable">
+            <summary>设置 DbHelperOleDb.ExecuteSqlTran(Hashtable SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExistsString">
+            <summary>设置 DbHelperOleDb.Exists(String strSql) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.ExistsStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.Exists(String strSql, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.GetMaxIDStringString">
+            <summary>设置 DbHelperOleDb.GetMaxID(String FieldName, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.GetSingleString">
+            <summary>设置 DbHelperOleDb.GetSingle(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.GetSingleStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.GetSingle(String SQLString, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.PrepareCommandOleDbCommandOleDbConnectionOleDbTransactionStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.PrepareCommand(OleDbCommand cmd, OleDbConnection conn, OleDbTransaction trans, String cmdText, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.QueryString">
+            <summary>设置 DbHelperOleDb.Query(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.QueryStringOleDbParameterArray">
+            <summary>设置 DbHelperOleDb.Query(String SQLString, OleDbParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOleDb.StaticConstructor">
+            <summary>设置 DbHelperOleDb.DbHelperOleDb() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperOra">
+            <summary>DBUtility.DbHelperOra 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOra.#ctor(DBUtility.DbHelperOra)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperOra.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOra.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperOra.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.BuildIntCommandOracleConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperOra.BuildIntCommand(OracleConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.BuildQueryCommandOracleConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperOra.BuildQueryCommand(OracleConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.Constructor">
+            <summary>设置 DbHelperOra.DbHelperOra() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteReaderString">
+            <summary>设置 DbHelperOra.ExecuteReader(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteReaderStringOracleParameterArray">
+            <summary>设置 DbHelperOra.ExecuteReader(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlInsertImgStringByteArray">
+            <summary>设置 DbHelperOra.ExecuteSqlInsertImg(String strSQL, Byte[] fs) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlString">
+            <summary>设置 DbHelperOra.ExecuteSql(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlStringOracleParameterArray">
+            <summary>设置 DbHelperOra.ExecuteSql(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlStringString">
+            <summary>设置 DbHelperOra.ExecuteSql(String SQLString, String content) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlTranArrayList">
+            <summary>设置 DbHelperOra.ExecuteSqlTran(ArrayList SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExecuteSqlTranHashtable">
+            <summary>设置 DbHelperOra.ExecuteSqlTran(Hashtable SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExistsString">
+            <summary>设置 DbHelperOra.Exists(String strSql) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.ExistsStringOracleParameterArray">
+            <summary>设置 DbHelperOra.Exists(String strSql, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.GetMaxIDStringString">
+            <summary>设置 DbHelperOra.GetMaxID(String FieldName, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.GetSingleString">
+            <summary>设置 DbHelperOra.GetSingle(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.GetSingleStringOracleParameterArray">
+            <summary>设置 DbHelperOra.GetSingle(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.PrepareCommandOracleCommandOracleConnectionOracleTransactionStringOracleParameterArray">
+            <summary>设置 DbHelperOra.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.QueryString">
+            <summary>设置 DbHelperOra.Query(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.QueryStringOracleParameterArray">
+            <summary>设置 DbHelperOra.Query(String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.RunProcedureStringIDataParameterArray">
+            <summary>设置 DbHelperOra.RunProcedure(String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.RunProcedureStringIDataParameterArrayInt32Out">
+            <summary>设置 DbHelperOra.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32&amp; rowsAffected) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.RunProcedureStringIDataParameterArrayString">
+            <summary>设置 DbHelperOra.RunProcedure(String storedProcName, IDataParameter[] parameters, String tableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperOra.StaticConstructor">
+            <summary>设置 DbHelperOra.DbHelperOra() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperSQL">
+            <summary>DBUtility.DbHelperSQL 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperSQL.#ctor(DBUtility.DbHelperSQL)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimDbHelperSQL.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperSQL.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimDbHelperSQL.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.BuildIntCommandSqlConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperSQL.BuildIntCommand(SqlConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.BuildQueryCommandSqlConnectionStringIDataParameterArray">
+            <summary>设置 DbHelperSQL.BuildQueryCommand(SqlConnection connection, String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ColumnExistsStringString">
+            <summary>设置 DbHelperSQL.ColumnExists(String tableName, String columnName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.Constructor">
+            <summary>设置 DbHelperSQL.DbHelperSQL() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteReaderString">
+            <summary>设置 DbHelperSQL.ExecuteReader(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteReaderStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.ExecuteReader(String SQLString, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlByTimeStringInt32">
+            <summary>设置 DbHelperSQL.ExecuteSqlByTime(String SQLString, Int32 Times) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlGetStringString">
+            <summary>设置 DbHelperSQL.ExecuteSqlGet(String SQLString, String content) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlInsertImgStringByteArray">
+            <summary>设置 DbHelperSQL.ExecuteSqlInsertImg(String strSQL, Byte[] fs) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlString">
+            <summary>设置 DbHelperSQL.ExecuteSql(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.ExecuteSql(String SQLString, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlStringString">
+            <summary>设置 DbHelperSQL.ExecuteSql(String SQLString, String content) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranHashtable">
+            <summary>设置 DbHelperSQL.ExecuteSqlTran(Hashtable SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranListOfCommandInfo">
+            <summary>设置 DbHelperSQL.ExecuteSqlTran(List`1&lt;CommandInfo&gt; cmdList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranListOfCommandInfoListOfCommandInfo">
+            <summary>设置 DbHelperSQL.ExecuteSqlTran(List`1&lt;CommandInfo&gt; list, List`1&lt;CommandInfo&gt; oracleCmdSqlList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranListOfString">
+            <summary>设置 DbHelperSQL.ExecuteSqlTran(List`1&lt;String&gt; SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranWithIndentityHashtable">
+            <summary>设置 DbHelperSQL.ExecuteSqlTranWithIndentity(Hashtable SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExecuteSqlTranWithIndentityListOfCommandInfo">
+            <summary>设置 DbHelperSQL.ExecuteSqlTranWithIndentity(List`1&lt;CommandInfo&gt; SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExistsString">
+            <summary>设置 DbHelperSQL.Exists(String strSql) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.ExistsStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.Exists(String strSql, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.GetCountString">
+            <summary>设置 DbHelperSQL.GetCount(String tableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.GetMaxIDStringString">
+            <summary>设置 DbHelperSQL.GetMaxID(String FieldName, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.GetSingleString">
+            <summary>设置 DbHelperSQL.GetSingle(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.GetSingleStringInt32">
+            <summary>设置 DbHelperSQL.GetSingle(String SQLString, Int32 Times) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.GetSingleStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.GetSingle(String SQLString, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.PrepareCommandSqlCommandSqlConnectionSqlTransactionStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, String cmdText, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.QueryString">
+            <summary>设置 DbHelperSQL.Query(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.QueryStringInt32">
+            <summary>设置 DbHelperSQL.Query(String SQLString, Int32 Times) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.QueryStringSqlParameterArray">
+            <summary>设置 DbHelperSQL.Query(String SQLString, SqlParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.RunProcedureStringIDataParameterArray">
+            <summary>设置 DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.RunProcedureStringIDataParameterArrayInt32Out">
+            <summary>设置 DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, Int32&amp; rowsAffected) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.RunProcedureStringIDataParameterArrayString">
+            <summary>设置 DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, String tableName) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.RunProcedureStringIDataParameterArrayStringInt32">
+            <summary>设置 DbHelperSQL.RunProcedure(String storedProcName, IDataParameter[] parameters, String tableName, Int32 Times) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.StaticConstructor">
+            <summary>设置 DbHelperSQL.DbHelperSQL() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimDbHelperSQL.TabExistsString">
+            <summary>设置 DbHelperSQL.TabExists(String TableName) 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimHelperForSql">
+            <summary>DBUtility.HelperForSql 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimHelperForSql.#ctor(DBUtility.HelperForSql)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimHelperForSql.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimHelperForSql.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimHelperForSql.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.Constructor">
+            <summary>设置 HelperForSql.HelperForSql() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteReaderbbsString">
+            <summary>设置 HelperForSql.ExecuteReaderbbs(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteReadernewString">
+            <summary>设置 HelperForSql.ExecuteReadernew(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteReaderoldString">
+            <summary>设置 HelperForSql.ExecuteReaderold(String strSQL) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteSqlbbsString">
+            <summary>设置 HelperForSql.ExecuteSqlbbs(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteSqlnewString">
+            <summary>设置 HelperForSql.ExecuteSqlnew(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.ExecuteSqloldString">
+            <summary>设置 HelperForSql.ExecuteSqlold(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.GetSinglebbsString">
+            <summary>设置 HelperForSql.GetSinglebbs(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.GetSinglenewString">
+            <summary>设置 HelperForSql.GetSinglenew(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.GetSingleoldString">
+            <summary>设置 HelperForSql.GetSingleold(String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.MD5String">
+            <summary>设置 HelperForSql.MD5(String str) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimHelperForSql.StaticConstructor">
+            <summary>设置 HelperForSql.HelperForSql() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimOracleHelper">
+            <summary>DBUtility.OracleHelper 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimOracleHelper.#ctor(DBUtility.OracleHelper)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimOracleHelper.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimOracleHelper.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimOracleHelper.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.CacheParametersStringOracleParameterArray">
+            <summary>设置 OracleHelper.CacheParameters(String cacheKey, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.Constructor">
+            <summary>设置 OracleHelper.OracleHelper() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteNonQueryOracleConnectionCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteNonQuery(OracleConnection connection, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteNonQueryOracleTransactionCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteNonQuery(OracleTransaction trans, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteNonQueryStringCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteNonQuery(String connectionString, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteNonQueryStringString">
+            <summary>设置 OracleHelper.ExecuteNonQuery(String connectionString, String cmdText) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteReaderStringCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteReader(String connectionString, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteScalarOracleConnectionCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteScalar(OracleConnection connectionString, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteScalarOracleTransactionCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteScalar(OracleTransaction transaction, CommandType commandType, String commandText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteScalarStringCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.ExecuteScalar(String connectionString, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteSqlTranStringListOfCommandInfo">
+            <summary>设置 OracleHelper.ExecuteSqlTran(String conStr, List`1&lt;CommandInfo&gt; cmdList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExecuteSqlTranStringListOfString">
+            <summary>设置 OracleHelper.ExecuteSqlTran(String conStr, List`1&lt;String&gt; SQLStringList) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.ExistsStringString">
+            <summary>设置 OracleHelper.Exists(String connectionString, String strOracle) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.GetCachedParametersString">
+            <summary>设置 OracleHelper.GetCachedParameters(String cacheKey) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.GetSingleStringString">
+            <summary>设置 OracleHelper.GetSingle(String connectionString, String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.OraBitBoolean">
+            <summary>设置 OracleHelper.OraBit(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.OraBoolString">
+            <summary>设置 OracleHelper.OraBool(String value) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.PrepareCommandOracleCommandOracleConnectionOracleTransactionCommandTypeStringOracleParameterArray">
+            <summary>设置 OracleHelper.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, CommandType cmdType, String cmdText, OracleParameter[] commandParameters) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.PrepareCommandOracleCommandOracleConnectionOracleTransactionStringOracleParameterArray">
+            <summary>设置 OracleHelper.PrepareCommand(OracleCommand cmd, OracleConnection conn, OracleTransaction trans, String cmdText, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.QueryStringString">
+            <summary>设置 OracleHelper.Query(String connectionString, String SQLString) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.QueryStringStringOracleParameterArray">
+            <summary>设置 OracleHelper.Query(String connectionString, String SQLString, OracleParameter[] cmdParms) 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimOracleHelper.StaticConstructor">
+            <summary>设置 OracleHelper.OracleHelper() 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimPubConstant">
+            <summary>DBUtility.PubConstant 的填充码类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimPubConstant.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimPubConstant.#ctor(DBUtility.PubConstant)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.ShimPubConstant.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimPubConstant.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.ShimPubConstant.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimPubConstant.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimPubConstant.ConnectionStringGet">
+            <summary>设置 PubConstant.get_ConnectionString() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimPubConstant.Constructor">
+            <summary>设置 PubConstant.PubConstant() 的 填充码</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.ShimPubConstant.GetConnectionStringString">
+            <summary>设置 PubConstant.GetConnectionString(String configName) 的 填充码</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubCommandInfo">
+            <summary>DBUtility.CommandInfo 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubCommandInfo.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubCommandInfo.#ctor(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubCommandInfo.#ctor(System.String,System.Data.SqlClient.SqlParameter[],DBUtility.EffentNextType)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubCommandInfo.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubCommandInfo.InitializeStub">
+            <summary>初始化 type StubCommandInfo 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubCommandInfo.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubCommandInfo.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDESEncrypt">
+            <summary>DBUtility.DESEncrypt 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDESEncrypt.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDESEncrypt.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDESEncrypt.InitializeStub">
+            <summary>初始化 type StubDESEncrypt 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDESEncrypt.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDESEncrypt.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDbHelper">
+            <summary>DBUtility.DbHelper 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelper.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelper.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelper.InitializeStub">
+            <summary>初始化 type StubDbHelper 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelper.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelper.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDbHelperNC">
+            <summary>DBUtility.DbHelperNC 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperNC.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperNC.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperNC.InitializeStub">
+            <summary>初始化 type StubDbHelperNC 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperNC.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperNC.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDbHelperOleDb">
+            <summary>DBUtility.DbHelperOleDb 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperOleDb.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOleDb.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperOleDb.InitializeStub">
+            <summary>初始化 type StubDbHelperOleDb 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOleDb.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOleDb.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDbHelperOra">
+            <summary>DBUtility.DbHelperOra 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperOra.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOra.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperOra.InitializeStub">
+            <summary>初始化 type StubDbHelperOra 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOra.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperOra.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubDbHelperSQL">
+            <summary>DBUtility.DbHelperSQL 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperSQL.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperSQL.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubDbHelperSQL.InitializeStub">
+            <summary>初始化 type StubDbHelperSQL 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperSQL.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubDbHelperSQL.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubHelperForSql">
+            <summary>DBUtility.HelperForSql 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubHelperForSql.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubHelperForSql.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubHelperForSql.InitializeStub">
+            <summary>初始化 type StubHelperForSql 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubHelperForSql.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubHelperForSql.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubOracleHelper">
+            <summary>DBUtility.OracleHelper 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubOracleHelper.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubOracleHelper.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubOracleHelper.InitializeStub">
+            <summary>初始化 type StubOracleHelper 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubOracleHelper.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubOracleHelper.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:DBUtility.Fakes.StubPubConstant">
+            <summary>DBUtility.PubConstant 的存根类型</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubPubConstant.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubPubConstant.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:DBUtility.Fakes.StubPubConstant.InitializeStub">
+            <summary>初始化 type StubPubConstant 的新实例</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubPubConstant.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:DBUtility.Fakes.StubPubConstant.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.DBUtilityDelegates">
+            <summary>包含用于 DBUtility 的存根和填充码的自定义委托</summary>
+        </member>
+    </members>
+</doc>

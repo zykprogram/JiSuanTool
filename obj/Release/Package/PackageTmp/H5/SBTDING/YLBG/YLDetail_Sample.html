@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../css/app.css" />
+    <link href="../css/mui.picker.css" rel="stylesheet" />
+    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-center"></a>
+        <h1 class="mui-title"></h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-content-padded">
+        </div>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">客户：</h5>
+        <form class="mui-input-group" runat="server">
+            <select id="custid"></select>
+        </form>
+        <h5 class="mui-content-padded">时间：</h5>
+        <button id='datechoose' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+        <h5 class="mui-content-padded">打样记录:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>饲养天数（天）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="syts" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>投料次数</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="tlcs" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>打样尾数（尾）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dyws" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">打样总重（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dyzz_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dyzz_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">打样均重（斤/尾）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dyjz_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dyjz_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">累计膨化投料量（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="phtl_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="phtl_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">累计沉水投料量（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cstl_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="cstl_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">膨化日投喂量（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="phrt_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="phrt_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">沉水日投喂量（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="csrt_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="csrt_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">预估存塘尾数（尾）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="ygct_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="ygct_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">逃病死鱼情况（斤）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="tbsy_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="tbsy_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded">
+        <h5 class="mui-content-padded">动保费用（元）:<a style="color: red">*</a></h5>
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>数值</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dbfy_number" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>价格(元/斤）</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="dbfy_price" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <h5 id="selectfile"></h5>
+    <div class="mui-input-row">
+        <input id="selectfile" onclick="SelectFile()" type="button" value="请选择文件" />
+        <input type="file" hidden id="file_input" title="123" accept="image/*">
+        <img id="Photo" class="img" />
+    </div>
+    <div class="mui-content-padded">
+        <form class="mui-input-group">
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary" onclick="clickok()">确认</button>&nbsp;&nbsp;
+                <button type="button" class="mui-btn mui-btn-danger" onclick="javascript:window.history.go(-1);">取消</button>
+            </div>
+        </form>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script>
+        function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate = year + seperator1 + month + seperator1 + strDate;
+            return currentdate;
+        }
+        datechoose.innerText = getNowFormatDate();
+        (function ($) {
+            $.init();
+            var result = $('#result')[0];
+            var btns = $('.btn');
+            btns.each(function (i, btn) {
+                btn.addEventListener('tap', function () {
+                    var optionsJson = this.getAttribute('data-options') || '{}';
+                    var options = JSON.parse(optionsJson);
+                    var id = this.getAttribute('id');
+                    /*
+                     * 首次显示时实例化组件
+                     * 示例为了简洁，将 options 放在了按钮的 dom 上
+                     * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+                     */
+                    var picker = new $.DtPicker(options);
+                    picker.show(function (rs) {
+                        /*
+                         * rs.value 拼合后的 value
+                         * rs.text 拼合后的 text
+                         * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+                         * rs.m 月，用法同年
+                         * rs.d 日，用法同年
+                         * rs.h 时，用法同年
+                         * rs.i 分（minutes 的第二个字母），用法同年
+                         */
+                        if (!(document.getElementById("datechoose").innerText == rs.text) && document.getElementById("type") != "") {
+                            debugger;
+                            GetDetailInfo(document.getElementById("custid").value, rs.text);
+                        }
+                        datechoose.innerText = rs.text;
+                        /*
+                         * 返回 false 可以阻止选择框的关闭
+                         * return false;
+                         */
+                        /*
+                         * 释放组件资源，释放后将将不能再操作组件
+                         * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+                         * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+                         * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+                         */
+                        picker.dispose();
+                    });
+                }, false);
+            });
+        })(mui);
+    </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../js/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.poppicker.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        function SelectFile() {
+            return $("#file_input").click();
+        }
+
+        $(document).ready(function () {
+            //选择文件
+            $("input[type='file']").change(function () {
+                var file = this.files[0];
+                if (window.FileReader) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    //监听文件读取结束后事件    
+                    reader.onloadend = function (e) {
+                        $(".img").attr("src", e.target.result);    //e.target.result就是最后的路径地址
+                    };
+                }
+            });
+
+            //获取客户信息
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetCustInfo",
+                type: "post",
+                //data: { id: id },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        var new_Html = "";
+                        for (var i = 0; i < data.length; i++) {
+                            new_Html += "<option value='" + data[i].ID + "'>" + data[i].NAME + "</option>";
+                        }
+                        $("#custid").html(new_Html);
+                        GetDetailInfo(data[0].ID, document.getElementById("datechoose").innerText);
+                    }
+                }
+            });
+
+            //选择不同客户加载不同信息
+            $("#custid").change(function () {
+                GetDetailInfo($("#custid").val(), document.getElementById("datechoose").innerText);
+            });
+        });
+
+        function GetDetailInfo(custid, time) {
+            //获取基础细信息
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetDetail_SampleBaseInfo",
+                type: "post",
+                data: { custid: custid, time: time },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length != 0) {
+                        document.getElementById("syts").value = data[0].SYTS;
+                        document.getElementById("tlcs").value = data[0].TLCS;
+                        document.getElementById("dyws").value = data[0].DYWS;
+                        document.getElementById("dyzz_number").value = data[0].DYZZ_NUMBER;
+                        document.getElementById("dyzz_price").value = data[0].DYZZ_PRICE;
+                        document.getElementById("dyjz_number").value = data[0].DYJZ_NUMBER;
+                        document.getElementById("dyjz_price").value = data[0].DYJZ_PRICE;
+                        document.getElementById("phtl_number").value = data[0].PHTL_NUMBER;
+                        document.getElementById("phtl_price").value = data[0].PHTL_PRICE;
+                        document.getElementById("cstl_number").value = data[0].CSTL_NUMBER;
+                        document.getElementById("cstl_price").value = data[0].CSTL_PRICE;
+                        document.getElementById("phrt_number").value = data[0].PHRT_NUMBER;
+                        document.getElementById("phrt_price").value = data[0].PHRT_PRICE;
+                        document.getElementById("csrt_number").value = data[0].CSRT_NUMBER;
+                        document.getElementById("csrt_price").value = data[0].CSRT_PRICE;
+                        document.getElementById("ygct_number").value = data[0].YGCT_NUMBER;
+                        document.getElementById("ygct_price").value = data[0].YGCT_PRICE;
+                        document.getElementById("tbsy_number").value = data[0].TBSY_NUMBER;
+                        document.getElementById("tbsy_price").value = data[0].TBSY_PRICE;
+                        document.getElementById("dbfy_number").value = data[0].DBFY_NUMBER;
+                        document.getElementById("dbfy_price").value = data[0].DBFY_PRICE;
+                    } else {
+                        document.getElementById("syts").value = 0;
+                        document.getElementById("tlcs").value = 0;
+                        document.getElementById("dyws").value = 0;
+                        document.getElementById("dyzz_number").value = 0;
+                        document.getElementById("dyzz_price").value = 0;
+                        document.getElementById("dyjz_number").value = 0;
+                        document.getElementById("dyjz_price").value = 0;
+                        document.getElementById("phtl_number").value = 0;
+                        document.getElementById("phtl_price").value = 0;
+                        document.getElementById("cstl_number").value = 0;
+                        document.getElementById("cstl_price").value = 0;
+                        document.getElementById("phrt_number").value = 0;
+                        document.getElementById("phrt_price").value = 0;
+                        document.getElementById("csrt_number").value = 0;
+                        document.getElementById("csrt_price").value = 0;
+                        document.getElementById("ygct_number").value = 0;
+                        document.getElementById("ygct_price").value = 0;
+                        document.getElementById("tbsy_number").value = 0;
+                        document.getElementById("tbsy_price").value = 0;
+                        document.getElementById("dbfy_number").value = 0;
+                        document.getElementById("dbfy_price").value = 0;
+                    }
+                }
+            });
+
+            //获取图片信息
+            $.ajax({
+                url: "../../../Handler/YLHandler.ashx?method=GetDetail_SampleImg",
+                type: "post",
+                data: { custid: custid, time: time },
+                dataType: "json",
+                success: function (data) {
+                    if (data.length != 0) {
+                        document.getElementById("Photo").src = data.result;
+                    } else {
+                        document.getElementsById("Photo").src = "";
+                    }
+                }
+            });
+        }
+
+        //提交按钮
+        function clickok() {
+            var custid = document.getElementById("custid").value;
+            var syts = document.getElementById("syts").value;
+            var tlcs = document.getElementById("tlcs").value;
+            var dyws = document.getElementById("dyws").value;
+            var dyzz_number = document.getElementById("dyzz_number").value;
+            var dyzz_price = document.getElementById("dyzz_price").value;
+            var dyjz_number = document.getElementById("dyjz_number").value;
+            var dyjz_price = document.getElementById("dyjz_price").value;
+            var phtl_number = document.getElementById("phtl_number").value;
+            var phtl_price = document.getElementById("phtl_price").value;
+            var cstl_number = document.getElementById("cstl_number").value;
+            var cstl_price = document.getElementById("cstl_price").value;
+            var phrt_number = document.getElementById("phrt_number").value;
+            var phrt_price = document.getElementById("phrt_price").value;
+            var csrt_number = document.getElementById("csrt_number").value;
+            var csrt_price = document.getElementById("csrt_price").value;
+            var ygct_number = document.getElementById("ygct_number").value;
+            var ygct_price = document.getElementById("ygct_price").value;
+            var tbsy_number = document.getElementById("tbsy_number").value;
+            var tbsy_price = document.getElementById("tbsy_price").value;
+            var dbfy_number = document.getElementById("dbfy_number").value;
+            var dbfy_price = document.getElementById("dbfy_price").value;
+            var photo = document.getElementById("Photo").src;
+            var userid = getQueryString("userid");
+            var time = document.getElementById("datechoose").innerText;
+            if (custid != "") {
+                $.ajax({
+                    url: "../../../Handler/YLHandler.ashx?method=SubmitDetail_Sample",
+                    type: "post",
+                    data: {
+                        custid: custid,
+                        syts: syts,
+                        tlcs: tlcs,
+                        dyws: dyws,
+                        dyzz_number: dyzz_number,
+                        dyzz_price: dyzz_price,
+                        dyjz_number: dyjz_number,
+                        dyjz_price: dyjz_price,
+                        phtl_number: phtl_number,
+                        phtl_price: phtl_price,
+                        cstl_number: cstl_number,
+                        cstl_price: cstl_price,
+                        phrt_number: phrt_number,
+                        phrt_price: phrt_price,
+                        csrt_number: csrt_number,
+                        csrt_price: csrt_price,
+                        ygct_number: ygct_number,
+                        ygct_price: ygct_price,
+                        tbsy_number: tbsy_number,
+                        tbsy_price: tbsy_price,
+                        dbfy_number: dbfy_number,
+                        dbfy_price: dbfy_price,
+                        photo: photo,
+                        userid: userid,
+                        time: time
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        debugger;
+                        alert(data.result);
+                    },
+                    error: function() {
+                        alert("提交失败！");
+                    }
+                });
+            }
+        }
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

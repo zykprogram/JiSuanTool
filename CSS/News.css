@@ -1,0 +1,156 @@
+﻿html, body
+{
+	color: #2E4B5D;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f5f5f5;
+}
+#pageHead
+{
+	background-position: center top;
+	background-image: url(../Images/lineTitle.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	color: #fff;
+	height: 27px;
+}
+#pageContent
+{
+	text-align: center;
+}
+.pageContent
+{
+	text-align: center;
+}
+#pageFoot
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#tableBox
+{
+	border: solid 1px #666633;
+	background-color: #fff;
+	width: 98%;
+	margin-top: 5px;
+}
+.tableBox
+{
+	border: solid 1px #666633;
+	background-color: #fff;
+	width: 98%;
+	margin-top: 5px;
+}
+#editContent
+{
+	background-color: #fff;
+}
+.editContent
+{
+	background-color: #fff;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+.red
+{
+	color: Red;
+}
+th.field
+{
+	width: 15%;
+	text-align: right;
+	white-space: nowrap;
+	font-weight: normal;
+}
+td.cont
+{
+	width: 35%;
+	text-align: left;
+}
+td.bcont
+{
+	text-align: left;
+}
+th.field1
+{
+	width: 9%;
+	text-align: right;
+	white-space: nowrap;
+	font-weight: normal;
+}
+td.cont1
+{
+	width: 22%;
+	text-align: left;
+}
+input.text, textarea.text
+{
+	color: #000000;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #FFFFFF;
+	border: 1px solid #a5aec6;
+	width: 90%;
+}
+.button
+{
+	font-size: 12px;
+	color: #003366;
+	width: 84px;
+	height: 25px;
+	padding-top: 4px;
+	margin: 0;
+	border: solid 1px #f1ad6c;
+	background-color: #f9efcb;
+}
+.titlebg
+{
+	height: 22px;
+	background-position: left top;
+	background-image: url(/Images/lineTitle.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+}
+input.txt, textarea.txt
+{
+	border: 1px solid #cccccc;
+	color: #000000;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: #f9f9f9;
+	width: 90%;
+}
+
+.serverTable
+{
+	border: solid 1px #0099ff;
+}
+.serverHead th
+{
+	background-color: #66ccff;
+	font-size: 12px;
+	text-align: center;
+	border-bottom: #0099ff 1px solid;
+	border-right: #0099ff 1px solid;
+	height: 25px;
+}
+.serverTable td
+{
+	text-align: center;
+	border-bottom: #0099ff 1px solid;
+	border-right: #0099ff 1px solid;
+}

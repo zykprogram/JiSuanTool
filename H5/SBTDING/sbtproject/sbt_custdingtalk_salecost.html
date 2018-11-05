@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>sbtjt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+</head>
+
+<body>
+    <form id="form1">
+        <h5 class="mui-content-padded">请选择目标年份</h5>
+        <select class="mui-btn mui-btn-block" id="years">
+            <option value=""></option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+        <h5 class="mui-content-padded">请选择目标月份</h5>
+        <select class="mui-btn mui-btn-block" id="months">
+            <option value=""></option>
+            <option value="年度">年度目标</option>
+            <option value="01">01月目标</option>
+            <option value="02">02月目标</option>
+            <option value="03">03月目标</option>
+            <option value="04">04月目标</option>
+            <option value="05">05月目标</option>
+            <option value="06">06月目标</option>
+            <option value="07">07月目标</option>
+            <option value="08">08月目标</option>
+            <option value="09">09月目标</option>
+            <option value="10">10月目标</option>
+            <option value="11">11月目标</option>
+            <option value="12">12月目标</option>
+        </select>
+        <br />
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary" onclick="clickok()">确认</button>&nbsp;&nbsp;
+        <button type="button" class="mui-btn mui-btn-danger" onclick="javascript:window.history.go(-1);">取消</button>
+        </div>
+    </form>
+</body>
+<script src="../js/mui.min.js"></script>
+<script>
+ 
+    function clickok() {
+        if(document.getElementById("years").value==""||document.getElementById("years").value == null)
+        {
+            alert("请填写目标年份！");
+            return;
+        }
+        if (document.getElementById("months").value == "" || document.getElementById("months").value == null) {
+            alert("请填写目标月份！");
+            return;
+        }
+        if (document.getElementById("months").value == "年度") {
+            localStorage.setItem("yearmonth", document.getElementById("years").value.toString())
+        }
+        else {
+            localStorage.setItem("yearmonth", document.getElementById("years").value.toString()+"-" + document.getElementById("months").value.toString())
+        }
+         //  alert(localStorage.getItem("yearmonth"));
+        window.open("sbt_custdingtalk_salecost_target.aspx");
+    }
+
+</script>
+</html>

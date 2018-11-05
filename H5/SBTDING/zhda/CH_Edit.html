@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SBTJT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <style>
+        h5 {
+            margin: 5px 7px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">场户档案</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-content-padded" style="margin: 2px;">
+            <h5>客户：<b id="Name"></b></h5>
+            <h5>畜种：</h5>
+            <div class="mui-input-row">
+                <select id="Type">
+                    <option></option>
+                    <option value="生猪">生猪</option>
+                    <option value="蛋鸡">蛋鸡</option>
+                    <option value="肉鸡">肉鸡</option>
+                    <option value="鸭">鸭</option>
+                </select>
+            </div>
+            <h5>详细地址:</h5>
+            <div class="mui-input-row">
+                <textarea id="Address" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>联系人：</h5>
+            <div class="mui-input-row">
+                <textarea id="Linkman" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>手机：</h5>
+            <div class="mui-input-row">
+                <textarea id="Phone" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>状态：</h5>
+            <div class="mui-input-row">
+                <textarea id="Status" rows="1" placeholder=""></textarea>
+            </div>
+            <h5>饲料品牌：</h5>
+            <div class="mui-input-row">
+                <textarea id="Brand" rows="1" placeholder=""></textarea>
+            </div>
+            <div class="mui-input-row">
+                <label>总存栏：</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="Totalcl" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>能繁母畜存栏：</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="Mccl" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>出栏：</label>
+                <div class="mui-numbox" style="width: 50%;">
+                    <button class="mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" id="Cl" value="" />
+                    <button class="mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+            <form class="mui-input-group">
+                <div class="mui-button-row">
+                    <button id="btn_sure" type="button" class="mui-btn mui-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+                    <button type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/mui.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        var id;
+        $(document).ready(function () {
+            var id = getQueryString("id");
+
+            //获取场户信息
+            $.ajax({
+                url: "../../../Handler/CHHandler.ashx?method=Get",
+                type: "post",
+                data: { id: id },
+                dataType: "json",
+                success: function (data) {
+                    document.getElementById("Name").innerText = data[0].NAME;
+                    document.getElementById("Type").value = data[0].TYPE;
+                    document.getElementById("Address").value = data[0].ADDRESS;
+                    document.getElementById("Linkman").value = data[0].LINKMAN;
+                    document.getElementById("Phone").value = data[0].PHONE;
+                    document.getElementById("Status").value = data[0].STATUS;
+                    document.getElementById("Brand").value = data[0].BRAND;
+                    document.getElementById("Totalcl").value = data[0].TOTALCL;
+                    document.getElementById("Mccl").value = data[0].MCCL;
+                    document.getElementById("Cl").value = data[0].CL;
+                }
+            });
+
+            $("#btn_sure").click(function () {
+                $.ajax({
+                    url: "../../../Handler/CHHandler.ashx?method=Edit",
+                    type: "post",
+                    data: {
+                        id: id,
+                        User_id: getQueryString("fm_user"),
+                        Type: $("#Type").val(),
+                        Address: document.getElementById("Address").value,
+                        Linkman: document.getElementById("Linkman").value,
+                        Phone: document.getElementById("Phone").value,
+                        Totalcl: document.getElementById("Totalcl").value,
+                        Mccl: document.getElementById("Mccl").value,
+                        Cl: document.getElementById("Cl").value,
+                        Status: document.getElementById("Status").value,
+                        Brand: document.getElementById("Brand").value
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        alert(data.result);
+                    }
+                });
+            });
+        });
+
+        //QueryString
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>
